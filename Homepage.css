@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none; /* no underline */
+}
+.bold {
+    font-weight: bold;
+}
+
+body {
+    min-width: 950px;
+}
+
+/* Navigation bar */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.helsinkiLogo {
+    max-width: 100px;
+    min-width: 100px;
+    margin: 10px;
+}
+
+.navItem {
+    margin: 15px;
+}
+
+
+.dropbtn {
+    margin: 15px;
+    position: relative;
+    bottom: 5px;
+}
+
+.dropbtn>img {
+    position: relative;
+    top: 7px;
+    right: 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.searchIcon {
+    margin-left: auto
+}
+/* Splash Image */
+
+.splash {
+    --splash-height: 350px;
+    height: var(--splash-height);
+}
+
+.splashImage {
+    position: absolute;
+    height: var(--splash-height);
+    width: 100%;
+}
+
+.splashImage-overlay {
+    position: absolute;
+    height: var(--splash-height);
+    width: 80%;
+}
+
+.overlayText {
+    position: absolute;
+    width: 50%;
+    margin: 10% 50px;
+}
+
+/* Content Cards */
+
+.contentText {
+    margin: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.contentCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+
+.Card {
+    background-color: rgb(240, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.Card > hr {
+    width: 50%;
+    margin: 0 auto;
+    color: lightseagreen;
+}
+.cardIcon {
+    height: 50px;
+}
+.readMore > a {
+    position: relative;
+    color: rgb(3, 3, 247);
+}
+.cardArrow {
+    margin: 0 5px;
+    color: blue;
+    filter: invert(30%) sepia(55%) saturate(7412%) hue-rotate(230deg) brightness(96%) contrast(91%);
+}
+
+.seeAllButton {
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: blue;
+    width: 20%;
+    color: white;
+}
+
+/* Big images  */
+
+.overlayImage {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    left: 60%;
+    top: 7%;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+}
+
+.eventsButton {
+    padding: 10px;
+    border: 2px solid black;
+    margin-top: auto;
+}
