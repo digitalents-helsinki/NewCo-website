@@ -1,8 +1,14 @@
 * {
+    --splash-height: 500px;
+    --width: 1400px;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75rem;
+
 }
+
 
 a {
     color: black;
@@ -17,14 +23,28 @@ body {
 }
 
 h1, h2, h3 {
-    font-size: 3rem;
+    margin-bottom: 16px;
+    font-size: 2.5rem;
 }
 .wrapper {
-    min-width: 1050px;
+    width: var(--width);
     background-color: rgb(248, 248, 248);
-    width: 80%;
     margin: 0 auto;
 }
+
+.container {
+    height: var(--splash-height);
+    width: var(--width);
+    margin-bottom: 100px
+}
+
+.wideImage {
+    position: absolute;
+    height: var(--splash-height);
+    width: var(--width);
+}
+
+
 /* Navigation bar */
 
 .navigation {
@@ -91,34 +111,36 @@ h1, h2, h3 {
 .searchIcon {
     margin-left: auto
 }
-/* Splash Image */
+/* Header image with diagonal swirl */
 
-.splash {
-    --splash-height: 500px;
-    --splash-min-width: 1050px;
+.headerWithDiagnalLine {
     height: var(--splash-height);
-    min-width: var(--splash-min-width);
+    width: var(--width);
 }
 
-.splashImage {
+.headerImage {
     position: absolute;
     height: var(--splash-height);
-    min-width: var(--splash-min-width);
-    width: 80%;
+    width: var(--width);
 }
 
-.splashImage-overlay {
+.diagonal-overlay {
     position: absolute;
     height: var(--splash-height);
-    min-width: var(--splash-min-width);
-    width: 60%;
+    width: 1000px;
 }
 
-.overlayText {
+.HeaderText {
+    margin: 150px;
     position: absolute;
-    width: 35%;
-    margin: 10%;
-    width: 30%;
+    min-width: 300px;
+    width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.HeaderText > h1 {
+    margin-bottom: 20px;
+
 }
 
 /* Content Cards */
@@ -177,9 +199,9 @@ h1, h2, h3 {
     color: white;
 }
 
-/* Big images  */
+/* Wide image with Text box on the right */
 
-.overlayImage {
+.overlayImageRight {
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -194,17 +216,20 @@ h1, h2, h3 {
 
 }
 
-.overlayImage2 {
+
+/* Square image with Text box on the left */
+
+.overlayImageLeft {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 100px;
+    top: 10%;
     left: 10%;
     padding: 36px;
     height: 400px;
     width: 30%;
     background-color: pink;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .eventsButton {
@@ -215,12 +240,10 @@ h1, h2, h3 {
 }
 
 .squareImage {
-    margin: 50px;
     position: absolute;
-    left: 30%;
+    left: 35%;
     height: var(--splash-height);
-    min-width: 500px;
-    width: 50%;
+    width: 700px;
 }
 
 /* Quote carousel */
@@ -240,9 +263,9 @@ h1, h2, h3 {
 .emailSubscription {
     display: flex;
 } 
-.squareImage2 {
+.squareImage60 {
  width: 60%;
- height: 600px;
+ height: 500px;
 }
 .subscriptionBox {
     display: flex;
@@ -250,13 +273,14 @@ h1, h2, h3 {
     background-color: papayawhip;
     padding: 50px;
     width: 40%;
-    height: 600px;
+    height: 500px;
 }
 .subscriptionBox > h3{
     font-size: 3rem;
 }
 
 .subscriptionBox > p{
+    font-size: 1.2rem;
     margin: 10px;
 }
 
@@ -271,8 +295,46 @@ h1, h2, h3 {
 }
 
 #yrittäjyydestäCheckbox{
-    border: 2px solid black;
 
 }
 
-#tapahtumistaCheckbox
+#tapahtumistaCheckbox {
+    
+}
+
+/* Big images 2  */
+
+.squareImageLeft {
+    position: absolute;
+    margin-left: 100px;
+    height: var(--splash-height);
+    width: 700px;
+}
+
+.overlayImageRight {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    height: 400px;
+    width: 500px;
+    background-color: lightblue ;
+    padding: 30px;
+    font-size: 1.2rem;
+    left: 50%;
+    top: 50px;
+
+}
+
+.overlayImage4 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 10%;
+    padding: 36px;
+    height: 400px;
+    width: 30%;
+    background-color: pink;
+    font-size: 1.1rem;
+}
