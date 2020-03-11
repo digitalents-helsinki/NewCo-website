@@ -28,11 +28,12 @@ h1, h2, h3 {
 }
 .wrapper {
     width: var(--width);
-    background-color: rgb(248, 248, 248);
+    background-color: white;
     margin: 0 auto;
 }
 
 .container {
+    position: relative;
     height: var(--splash-height);
     width: var(--width);
     margin-bottom: 100px
@@ -44,6 +45,17 @@ h1, h2, h3 {
     width: var(--width);
 }
 
+.SVGdecoration {
+    width: var(--width);
+    margin-bottom: -11px;
+}
+
+.blueSVGColour{
+    filter: invert(47%) sepia(84%) saturate(1321%) hue-rotate(131deg) brightness(109%) contrast(102%);
+}
+.lightGreySVGcolour {
+    filter: invert(92%) sepia(3%) saturate(91%) hue-rotate(203deg) brightness(107%) contrast(96%);
+}
 
 /* Navigation bar */
 
@@ -337,4 +349,17 @@ h1, h2, h3 {
     width: 30%;
     background-color: pink;
     font-size: 1.1rem;
+}
+
+/* map */
+
+.textOverlayLeft {
+    position: absolute;
+    bottom: 200px;
+    margin-left: 120px;
+    width: 30%;
+}
+
+.map {
+    position: absolute;
 }
