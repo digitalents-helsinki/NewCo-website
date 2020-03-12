@@ -166,8 +166,7 @@ a {
     margin: 50px;
     position: absolute;
     margin-top: 10%;
-    margin-right: 30%;
-    min-width: margin;
+    margin-right: 50%;
     min-width: 300px;
     width: 500px;
     font-size: 1.2rem;
@@ -301,23 +300,23 @@ a {
 
 .emailSubscription {
     display: flex;
-    justify-content: center;
 }
 
 .squareImage60 {
-    position: absolute;
-    background-size: cover;
-    background-position: center center;
-    width: 500px;
+    position: relative;
+    right: 20%;
+    width: 1000px;
     height: 500px;
 }
 
 .subscriptionBox {
+    position: absolute;
+    right: 0;
     display: flex;
     flex-direction: column;
     background-color: papayawhip;
-    padding: 50px;
-    min-width: 600px;
+    padding: 30px;
+    width: 500px;
     height: 500px;
 }
 
@@ -382,8 +381,8 @@ a {
 .textOverlayLeft {
     position: absolute;
     top: 100px;
-    margin-left: 150px;
-    width: 500px;
+    margin-left: 5%;
+    width: 30%;
     height: 500px;
 }
 
@@ -392,9 +391,9 @@ a {
     background-color: slategray;
     position: absolute;
     top: 50px;
-    right: 150px;
+    right: 5%;
     height: 400px;
-    width: 550px;
+    width: 50%;
 }
 
 /* footer */
@@ -446,5 +445,9 @@ a {
     .dropdown>p,
     a {
         font-size: 1.5rem;
+    }
+
+    .mapcontainer {
+        height: 600px;
     }
 }
