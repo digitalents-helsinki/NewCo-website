@@ -1,6 +1,8 @@
 * {
     --splash-height: 500px;
-    --width: 1400px;
+    --width: 100%;
+    --Kupari: #80EBD3;
+    --UI-grey: #F6F6F8;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -12,7 +14,8 @@
 
 a {
     color: black;
-    text-decoration: none; /* no underline */
+    text-decoration: none;
+    /* no underline */
 }
 
 
@@ -20,37 +23,51 @@ body {
     background-color: rgb(240, 240, 240);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin-bottom: 16px;
     font-size: 2.5rem;
 }
+
 .wrapper {
     width: var(--width);
+    max-width: 1400px;
     background-color: white;
     margin: 0 auto;
+
 }
 
 .container:not(:last-of-type) {
+    display: flex;
+    justify-content: center;
     position: relative;
     height: var(--splash-height);
     width: var(--width);
-    margin-bottom: 100px
+    margin-bottom: 100px;
+    overflow: hidden;
+
 }
 
 .wideImage {
+    background-size: cover;
+    background-position: center center;
     position: absolute;
     height: var(--splash-height);
-    width: var(--width);
+    min-width: 1400px;
+
 }
 
 .SVGdecoration {
+    position: relative;
+    bottom: 25px;
     width: var(--width);
-    margin-bottom: -11px;
 }
 
-.blueSVGColour{
-    filter: invert(47%) sepia(84%) saturate(1321%) hue-rotate(131deg) brightness(109%) contrast(102%);
+.blueSVGColour {
+    filter: invert(91%) sepia(11%) saturate(1467%) hue-rotate(103deg) brightness(99%) contrast(86%);
 }
+
 .lightGreySVGcolour {
     filter: invert(92%) sepia(3%) saturate(91%) hue-rotate(203deg) brightness(107%) contrast(96%);
 }
@@ -66,24 +83,27 @@ h1, h2, h3 {
     align-items: center;
     margin: 0px 20px;
 }
-.navigation > p {
+
+.navigation>p {
     font-size: 1.2rem;
 
 }
 
 .helsinkiLogo {
-    max-width: 100px;
-    min-width: 100px;
+    width: 100px;
     margin: 10px;
+    grid-area: helsinkiLogo
 }
 
 .navItem {
     margin: 15px;
 }
 
-.dropdown > p, a {
+.dropdown>p,
+a {
     font-size: 1.2rem;
 }
+
 .dropbtn {
     margin: 15px;
     position: relative;
@@ -123,8 +143,10 @@ h1, h2, h3 {
 }
 
 .searchIcon {
-    margin-left: auto
+    margin-left: auto;
+    grid-area: searchIcon;
 }
+
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -132,27 +154,27 @@ h1, h2, h3 {
     width: var(--width);
 }
 
-.headerImage {
-    position: absolute;
-    height: var(--splash-height);
-    width: var(--width);
-}
 
 .diagonal-overlay {
     position: absolute;
     height: var(--splash-height);
-    width: 1000px;
+    right: 10%;
+    width: 100%;
 }
 
 .HeaderText {
-    margin: 150px;
+    margin: 50px;
     position: absolute;
+    margin-top: 10%;
+    margin-right: 30%;
+    min-width: margin;
     min-width: 300px;
     width: 500px;
     font-size: 1.2rem;
     line-height: 1.8rem;
 }
-.HeaderText > h1 {
+
+.HeaderText>h1 {
     margin-bottom: 20px;
 
 }
@@ -186,18 +208,21 @@ h1, h2, h3 {
     font-size: 1.2rem;
 }
 
-.Card > hr {
+.Card>hr {
     width: 50%;
     margin: 0 auto;
     color: lightseagreen;
 }
+
 .cardIcon {
     height: 50px;
 }
-.readMore > a {
+
+.readMore>a {
     position: relative;
     color: rgb(3, 3, 247);
 }
+
 .cardArrow {
     margin: 0 5px;
     color: blue;
@@ -220,13 +245,13 @@ h1, h2, h3 {
     flex-direction: column;
     z-index: 2;
     position: relative;
-    left: 60%;
-    top: 7%;
     height: 400px;
-    width: 400px;
-    background-color: white;
+    width: 500px;
+    background-color: lightblue;
     padding: 30px;
     font-size: 1.2rem;
+    left: 10vw;
+    top: 50px;
 
 }
 
@@ -238,10 +263,10 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     top: 10%;
-    left: 10%;
+    right: 10%;
     padding: 36px;
     height: 400px;
-    width: 30%;
+    width: 500px;
     background-color: pink;
     font-size: 1.1rem;
 }
@@ -276,29 +301,36 @@ h1, h2, h3 {
 
 .emailSubscription {
     display: flex;
-} 
-.squareImage60 {
- width: 60%;
- height: 500px;
+    justify-content: center;
 }
+
+.squareImage60 {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 500px;
+    height: 500px;
+}
+
 .subscriptionBox {
     display: flex;
     flex-direction: column;
     background-color: papayawhip;
     padding: 50px;
-    width: 40%;
+    min-width: 600px;
     height: 500px;
 }
-.subscriptionBox > h3{
+
+.subscriptionBox>h3 {
     font-size: 3rem;
 }
 
-.subscriptionBox > p{
+.subscriptionBox>p {
     font-size: 1.2rem;
     margin: 10px;
 }
 
-.subscriptionBox > form > input{
+.subscriptionBox>form>input {
     margin: 10px;
     border: 2px solid black;
 }
@@ -308,13 +340,9 @@ h1, h2, h3 {
     width: 60%;
 }
 
-#yrittäjyydestäCheckbox{
+#yrittäjyydestäCheckbox {}
 
-}
-
-#tapahtumistaCheckbox {
-    
-}
+#tapahtumistaCheckbox {}
 
 /* Big images 2  */
 
@@ -325,20 +353,6 @@ h1, h2, h3 {
     width: 700px;
 }
 
-.overlayImageRight {
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    position: relative;
-    height: 400px;
-    width: 500px;
-    background-color: lightblue ;
-    padding: 30px;
-    font-size: 1.2rem;
-    left: 50%;
-    top: 50px;
-
-}
 
 .overlayImage4 {
     position: absolute;
@@ -355,19 +369,82 @@ h1, h2, h3 {
 
 /* map */
 
+.mapcontainer {
+    position: relative;
+    height: 500px;
+    background-color: var(--UI-grey);
+}
+
+.textOverlayLeft>p {
+    margin-bottom: 20px;
+}
+
 .textOverlayLeft {
     position: absolute;
-    bottom: 200px;
-    margin-left: 120px;
-    width: 30%;
+    top: 100px;
+    margin-left: 150px;
+    width: 500px;
+    height: 500px;
 }
 
 .map {
     border: 20px solid white;
     background-color: slategray;
     position: absolute;
-    width: 500px;
-    height: 450px;
-    left: 800px;
-    top: 100px
+    top: 50px;
+    right: 150px;
+    height: 400px;
+    width: 550px;
+}
+
+/* footer */
+.footer {
+    height: 300px;
+    background-color: var(--Kupari);
+}
+
+@media only screen and (max-width: 1100px) {
+    .navigation {
+        margin: 0px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "helsinkiLogo NewCo langDropdown searchIcon  "
+            "palvelut dropdown dropdown dropdown";
+        justify-items: center;
+    }
+
+    .navItem {
+        margin: 0px;
+    }
+
+    .helsinkiLogo {
+        width: 150px;
+        margin: 10px;
+        grid-area: helsinkiLogo
+    }
+
+    #NewCo {
+        grid-area: NewCo;
+    }
+
+    #langDropdown {
+        grid-area: langDropdown;
+        justify-self: end;
+    }
+
+    #Palvelut {
+        grid-area: palvelut;
+    }
+
+    .searchIcon {
+        margin: 0 auto;
+        grid-area: searchIcon;
+        width: 50px;
+    }
+
+    .dropdown>p,
+    a {
+        font-size: 1.5rem;
+    }
 }
