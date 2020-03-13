@@ -413,21 +413,18 @@ a {
 
 /* footer */
 .footer {
-    height: 350px;
     background-color: var(--Kupari);
     padding: 0rem;
 }
 
 .footerbox{
     position: relative;
-    height: 200px;
     bottom: 50%;
 }
 
 .footerText{
     position: relative;
     width: 100%;
-    height: 260px;
     display: flex;
     justify-content: space-evenly;
 }
