@@ -58,11 +58,22 @@ h3 {
 
 }
 
-.SVGdecoration {
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+.wavecontainer {
+    display: inline-block;
     position: relative;
-    bottom: 25px;
-    width: var(--width);
-}
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 28px;
+    bottom: 28px;
+  }
+
 
 .blueSVGColour {
     filter: invert(91%) sepia(11%) saturate(1467%) hue-rotate(103deg) brightness(99%) contrast(86%);
@@ -80,8 +91,10 @@ h3 {
 
 .navigation {
     display: flex;
-    align-items: center;
     margin: 0px 20px;
+    padding: 0;
+    align-items: center;
+    flex-wrap: nowrap
 }
 
 .navigation>p {
@@ -92,11 +105,14 @@ h3 {
 .helsinkiLogo {
     width: 100px;
     margin: 10px;
-    grid-area: helsinkiLogo
+    
 }
 
 .navItem {
     margin: 15px;
+    text-align: center;
+    display: flex;
+    align-content: center;
 }
 
 .dropdown>p,
@@ -107,7 +123,6 @@ a {
 .dropbtn {
     margin: 15px;
     position: relative;
-    bottom: 5px;
 }
 
 .dropbtn>img {
@@ -400,6 +415,7 @@ a {
 .footer {
     height: 350px;
     background-color: var(--Kupari);
+    padding: 0rem;
 }
 
 .footerbox{
@@ -429,7 +445,7 @@ a {
     width: 2rem;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1130px) {
     .navigation {
         margin: 0px;
         display: grid;
