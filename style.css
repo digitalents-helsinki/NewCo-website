@@ -63,7 +63,8 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
+
 .wavecontainer {
     display: inline-block;
     position: relative;
@@ -72,7 +73,7 @@ svg {
     overflow: hidden;
     height: 28px;
     bottom: 28px;
-  }
+}
 
 
 .blueSVGColour {
@@ -89,29 +90,31 @@ svg {
 
 /* Basic stuff */
 .wavemotif-loader {
-    display:block;
-    position:relative;
-    width:100%;
-    padding:25px 0;
-    content:"ss";
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 25px 0;
+    content: "ss";
 }
 
 /* Colors for wave motifs */
 .waveKupari {
-background-color:var(--Kupari);
+    background-color: var(--Kupari);
 }
+
 .waveUIGREY {
-background-color:var(--UI-grey);
+    background-color: var(--UI-grey);
 }
 
 /* Wave motifs */
 .waveTyrsky {
-   -webkit-mask-image: url("/waves/tyrsky.svg");
+    -webkit-mask-image: url("/waves/tyrsky.svg");
     mask-image: url("/waves/tyrsky.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom:50px;
+    bottom: 50px;
 }
+
 /* .waveVarina {
    -webkit-mask-image: url("/waves/varina.svg");
     mask-image: url("/waves/varina.svg");
@@ -127,35 +130,78 @@ background-color:var(--UI-grey);
     bottom:50px;
 } */
 .wavePulssi {
-   -webkit-mask-image: url("/waves/pulssi.svg");
+    -webkit-mask-image: url("/waves/pulssi.svg");
     mask-image: url("/waves/pulssi.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom:50px;
+    bottom: 50px;
 }
+
 .wavePerus {
-   -webkit-mask-image: url("/waves/perus.svg");
+    -webkit-mask-image: url("/waves/perus.svg");
     mask-image: url("/waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom:25px;
+    bottom: 25px;
 }
+
 .waveTyyni {
-   -webkit-mask-image: url("/waves/tyyni.svg");
+    -webkit-mask-image: url("/waves/tyyni.svg");
     mask-image: url("/waves/tyyni.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom:25px;
+    bottom: 25px;
 }
 
 /* Navigation bar */
 
 .navigation {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 20% 100px;
+    
+    grid-template-areas:
+        "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown ";
+    text-align: center;
     margin: 0px 20px;
     padding: 0;
-    align-items: center;
-    flex-wrap: nowrap
+}
+#NewCo{
+    grid-area:NewCo
+}
+#Palvelut {
+    grid-area: Palvelut;
+}
+
+#Palvelut-content {
+    grid-area: Palvelut-content;
+}
+
+#Tapahtumat {
+    grid-area: Tapahtumat
+}
+
+#Oppaita {
+    grid-area: Oppaita;
+}
+
+#Oppaita-content {
+    grid-area: Oppaita-content;
+}
+
+#Tietoa {
+    grid-area: Tietoa;
+}
+
+#Tietoa-content {
+    grid-area: Tietoa-content;
+}
+
+#langDropdown {
+    grid-area: langDropdown;
+}
+
+#langDropdown-content {
+    grid-area: langDropdown-content;
 }
 
 .navigation>p {
@@ -164,11 +210,13 @@ background-color:var(--UI-grey);
 }
 
 .helsinkiLogo {
+    grid-area: helsinkiLogo;
     width: 100px;
     margin: 10px;
-    
+
 }
 
+/*
 .navItem {
     margin: 15px;
     text-align: center;
@@ -190,18 +238,24 @@ a {
     position: relative;
     top: 7px;
     right: 8px;
-}
+} */
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    /* background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1; */
 }
 
-.dropdown-content a {
+/* .dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -212,10 +266,10 @@ a {
 
 .dropdown-content a:hover {
     background-color: #ddd;
-}
+} */
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    height: 100%;
 }
 
 .searchIcon {
@@ -478,12 +532,12 @@ a {
     padding: 0rem;
 }
 
-.footerbox{
+.footerbox {
     position: relative;
     bottom: 50%;
 }
 
-.footerText{
+.footerText {
     position: relative;
     width: 100%;
     display: flex;
@@ -493,12 +547,15 @@ a {
 .helsinkiLogoFooter {
     width: 150px;
 }
+
 .footerBox {
     line-height: 2.1rem;
 }
-.footerBox > img {
+
+.footerBox>img {
     margin: 0.2rem;
 }
+
 .svgIcon {
     width: 2rem;
 }
@@ -551,9 +608,10 @@ a {
     .mapcontainer {
         height: 600px;
     }
+
     /* footer */
 
-    .footerbox{
+    .footerbox {
 
         bottom: 30%;
     }
