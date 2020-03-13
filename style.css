@@ -4,8 +4,8 @@
     --Kupari: #80EBD3;
     --UI-grey: #F6F6F8;
     --bussi:  #0000bf;
-    --suomenlinna: #f5a3c7;
-    --engel: #ffe977;
+    --suomenlinna: #fad1e3;
+    --engel: #fff4BB;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -160,13 +160,12 @@ svg {
 
 .navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 20% 100px;
-    
+    grid-template-columns: 100px 200px 100px 100px 200px 100px 20% 100px;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown ";
-    text-align: center;
     margin: 0px 20px;
     padding: 0;
+    overflow: visible;
 }
 #NewCo{
     grid-area:NewCo
@@ -226,12 +225,13 @@ svg {
     display: flex;
     align-content: center;
 }
-
-.dropdown>p,
-a {
+*/
+.dropdown {
     font-size: 1.2rem;
-}
 
+
+}
+/*
 .dropbtn {
     margin: 15px;
     position: relative;
