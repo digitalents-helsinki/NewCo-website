@@ -3,6 +3,9 @@
     --width: 100%;
     --Kupari: #80EBD3;
     --UI-grey: #F6F6F8;
+    --bussi:  #0000bf;
+    --suomenlinna: #f5a3c7;
+    --engel: #ffe977;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -286,7 +289,7 @@ a {
 .Card>hr {
     width: 50%;
     margin: 0 auto;
-    color: lightseagreen;
+    color: var(--Kupari);
 }
 
 .cardIcon {
@@ -295,12 +298,12 @@ a {
 
 .readMore>a {
     position: relative;
-    color: rgb(3, 3, 247);
+    color: var(--bussi);
 }
 
 .cardArrow {
     margin: 0 5px;
-    color: blue;
+    color: var(--bussi);
     filter: invert(30%) sepia(55%) saturate(7412%) hue-rotate(230deg) brightness(96%) contrast(91%);
 }
 
@@ -308,7 +311,7 @@ a {
     margin: 50px auto;
     text-align: center;
     padding: 10px;
-    background-color: blue;
+    background-color: var(--bussi);
     width: 20%;
     color: white;
 }
@@ -322,7 +325,7 @@ a {
     position: relative;
     height: 400px;
     width: 500px;
-    background-color: lightblue;
+    background-color: var(--Kupari);
     padding: 30px;
     font-size: 1.2rem;
     left: 10vw;
@@ -342,13 +345,13 @@ a {
     padding: 36px;
     height: 400px;
     width: 500px;
-    background-color: pink;
+    background-color: var(--suomenlinna);
     font-size: 1.1rem;
 }
 
 .eventsButton {
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #1a1a1a;
     margin-top: auto;
     width: 60%;
 }
@@ -390,7 +393,7 @@ a {
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: papayawhip;
+    background-color: var(--engel);
     padding: 30px;
     width: 500px;
     height: 500px;
@@ -438,7 +441,7 @@ a {
     padding: 36px;
     height: 400px;
     width: 30%;
-    background-color: pink;
+    background-color: var(--suomenlinna);
     font-size: 1.1rem;
 }
 
@@ -464,7 +467,7 @@ a {
 
 .map {
     border: 20px solid white;
-    background-color: slategray;
+    background-color: var(--UI-grey);
     position: absolute;
     top: 50px;
     right: 5%;
