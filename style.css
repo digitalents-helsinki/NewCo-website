@@ -160,22 +160,23 @@ svg {
 
 .navigation {
     display: grid;
-    grid-template-columns: 150px 150px 1fr 100px 200px 150px 25% 100px;
+    grid-template-columns: 110px 1fr 100px 100px 200px 1fr 2fr 50px;
     grid-template-rows: auto ;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
-    text-align: center;
-    margin: 0px 20px;
-    padding: 0;
-    align-items: center;
+    grid-gap: 0 10px;
+    justify-content: center;
 }
 #NewCo{
-    grid-area:NewCo
+    grid-area:NewCo;
+    align-self: center;
 }
 
 #Palvelut {
     grid-area: Palvelut;
+    align-self: center;
+
 }
 
 #Palvelut-content {
@@ -188,15 +189,18 @@ svg {
     opacity: 1;
 }
 #Palvelut-content:hover {
+    overflow: visible;
     height: 200px;
     opacity: 1;
 }
 
 #Tapahtumat {
+    align-self: center;
     grid-area: Tapahtumat
 }
 
 #Oppaita {
+    align-self: center;
     grid-area: Oppaita;
 }
 
@@ -215,6 +219,7 @@ svg {
 }
 
 #Tietoa {
+    align-self: center;
     grid-area: Tietoa;
 }
 
@@ -235,9 +240,12 @@ svg {
 #searchIcon{
     grid-area: searchIcon;
     justify-self: end;
+    align-self: center;
+
 
 }
 #langDropdown {
+    align-self: center;
     grid-area: langDropdown;
 }
 
