@@ -160,7 +160,7 @@ svg {
 
 .navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 20% 100px;
+    grid-template-columns: 150px 150px 1fr 100px 200px 150px 25% 100px;
     grid-template-rows: auto ;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
@@ -168,7 +168,6 @@ svg {
     text-align: center;
     margin: 0px 20px;
     padding: 0;
-    justify-items: center;
     align-items: center;
 }
 #NewCo{
@@ -185,6 +184,10 @@ svg {
 }
 
 #Palvelut:hover ~ #Palvelut-content {
+    height: 200px;
+    opacity: 1;
+}
+#Palvelut-content:hover {
     height: 200px;
     opacity: 1;
 }
@@ -206,6 +209,10 @@ svg {
     height: 200px;
     opacity: 1;
 }
+#Oppaita-content:hover{
+    height: 200px;
+    opacity: 1;
+}
 
 #Tietoa {
     grid-area: Tietoa;
@@ -220,13 +227,28 @@ svg {
     height: 200px;
     opacity: 1;
 }
+#Tietoa-content:hover {
+    height: 200px;
+    opacity: 1;
+}
 
+#searchIcon{
+    grid-area: searchIcon;
+    justify-self: end;
+
+}
 #langDropdown {
     grid-area: langDropdown;
 }
 
 #langDropdown-content {
+    opacity: 0;
     grid-area: langDropdown-content;
+}
+
+#langDropdown:hover ~ #langDropdown-content {
+    height: 100px;
+    opacity: 1;
 }
 
 .navigation>p {
@@ -267,6 +289,10 @@ a {
 
 .dropdown-content {
     height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+    align-content: flex-start;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
