@@ -26,7 +26,7 @@
 
 /* Content Cards */
 .contentCards {
-    margin: 0 auto;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -39,8 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    margin: 10px auto;
-    padding: 20px;
+    margin: 5px;
     font-size: 1.2rem;
 }
 
