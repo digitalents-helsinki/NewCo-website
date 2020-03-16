@@ -591,9 +591,21 @@ a {
     padding: 0rem;
 }
 
+.FooterWithoutMap{
+    margin-top: 200px;
+    background-color: var(--Kupari);
+    padding: 0rem;
+}
+
 .footerbox {
     position: relative;
     bottom: 50%;
+}
+
+.footerbox > hr {
+    width:90%;
+    text-align:right;
+    margin-left: 5%
 }
 
 .footerText {
@@ -617,6 +629,11 @@ a {
 
 .svgIcon {
     width: 2rem;
+}
+
+.copyRight{
+    font-size: 0.85rem;
+    margin: 10px 5% 0 5%;
 }
 
 @media only screen and (max-width: 1130px) {
