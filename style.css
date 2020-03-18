@@ -137,6 +137,7 @@ svg {
     mask-size: cover;
     height: 95px;
 }
+
 .waveSykeUpsidedown {
     transform: rotate(180deg);
     -webkit-mask-image: url("/waves/syke.svg");
@@ -144,6 +145,7 @@ svg {
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 95px;
+    margin-bottom: 100px;
 }
 
 .wavePulssi {
@@ -349,13 +351,16 @@ a {
     text-align: left;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-} 
 
-.dropbtn:hover ~ .dropdown-content {
-    height: 200px;
+
+.dropbtn:hover {
+    border-bottom: 2px solid black;
 }
+
+.dropdown-content:hover~.dropbtn {
+    border-bottom: 2px solid black;
+}
+
 .dropdown-content:hover {
     height: 200px;
 }
@@ -486,7 +491,7 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
     background-color: var(--UI-grey);
 }
 
@@ -533,7 +538,7 @@ a {
     background-color: var(--Kupari);
     padding: 30px;
     font-size: 1.2rem;
-    left: 10vw;
+    margin-left: 10%;
     top: 50px;
 
 }
@@ -546,7 +551,7 @@ a {
     display: flex;
     flex-direction: column;
     top: 10%;
-    right: 10%;
+    left: 20%;
     padding: 36px;
     height: 400px;
     width: 500px;
@@ -561,7 +566,25 @@ a {
     width: 60%;
 }
 
-.squareImage {
+.squareImageRight {
+    position: absolute;
+    left: 5%;
+    height: var(--splash-height);
+    width: 700px;
+}
+
+/* Square image with Text box on the Right */
+
+
+
+.eventsButton {
+    padding: 10px;
+    border: 2px solid #1a1a1a;
+    margin-top: auto;
+    width: 60%;
+}
+
+.squareImageLeft {
     position: absolute;
     left: 35%;
     height: var(--splash-height);
@@ -628,13 +651,6 @@ a {
 #tapahtumistaCheckbox {}
 
 /* Big images 2  */
-
-.squareImageLeft {
-    position: absolute;
-    margin-left: 100px;
-    height: var(--splash-height);
-    width: 700px;
-}
 
 
 .overlayImage4 {
