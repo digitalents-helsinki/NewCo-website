@@ -137,6 +137,14 @@ svg {
     mask-size: cover;
     height: 95px;
 }
+.waveSykeUpsidedown {
+    transform: rotate(180deg);
+    -webkit-mask-image: url("/waves/syke.svg");
+    mask-image: url("/waves/syke.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 95px;
+}
 
 .wavePulssi {
     -webkit-mask-image: url("/waves/pulssi.svg");
@@ -470,11 +478,11 @@ a {
 .guideTitle {
     background-color: var(--UI-grey);
     text-align: center;
-    padding: 80px;
+    padding: 50px;
 }
 
 .guideDownloads {
-    margin: 0 auto;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -483,7 +491,7 @@ a {
 }
 
 .Guide {
-    background-color: rgb(240, 238, 238);
+    background-color: rgb(255, 255, 255);
     max-width: 350px;
     display: flex;
     flex-direction: column;
