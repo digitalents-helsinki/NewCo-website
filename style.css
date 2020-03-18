@@ -41,7 +41,7 @@ h3 {
 
 }
 
-.container:not(:last-of-type) {
+.container {
     display: flex;
     justify-content: center;
     position: relative;
@@ -49,7 +49,6 @@ h3 {
     width: var(--width);
     margin-bottom: 100px;
     overflow: hidden;
-
 }
 
 .wideImage {
@@ -193,6 +192,7 @@ svg {
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
     grid-gap: 0 10px;
     justify-content: center;
+    text-align: center;
 }
 
 #NewCo {
@@ -528,17 +528,17 @@ a {
 
 /* Wide image with Text box on the right */
 
-.overlayImageRight {
+.overlayImageLeft {
     display: flex;
     flex-direction: column;
     z-index: 2;
-    position: relative;
+    position: absolute;
+    left: 5%;
     height: 400px;
     width: 500px;
     background-color: var(--Kupari);
     padding: 30px;
     font-size: 1.2rem;
-    margin-left: 10%;
     top: 50px;
 
 }
@@ -546,7 +546,7 @@ a {
 
 /* Square image with Text box on the left */
 
-.overlayImageLeft {
+.overlayImageRight {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -566,15 +566,19 @@ a {
     width: 60%;
 }
 
-.squareImageRight {
+.squareImageLeft {
     position: absolute;
     left: 5%;
     height: var(--splash-height);
     width: 700px;
+
 }
 
 /* Square image with Text box on the Right */
 
+/* .overlayImageRight {
+    element already defined
+} */
 
 
 .eventsButton {
@@ -584,11 +588,12 @@ a {
     width: 60%;
 }
 
-.squareImageLeft {
+.squareImageRight {
     position: absolute;
-    left: 35%;
+    margin-left: 20%;
     height: var(--splash-height);
     width: 700px;
+
 }
 
 /* Quote carousel */
@@ -748,13 +753,16 @@ a {
 }
 
 @media only screen and (max-width: 1130px) {
+
     .navigation {
         margin: 0px;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr minmax(200px, 3fr) 2fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
-            "helsinkiLogo NewCo langDropdown searchIcon  "
-            "palvelut dropdown dropdown dropdown";
+            "helsinkiLogo NewCo . searchIcon langDropdown"
+            "Palvelut Tapahtumat Oppaita Tietoa langDropdown-content"
+            "Palvelut-content . Oppaita-content Tietoa-content .";
         justify-items: center;
     }
 
@@ -762,35 +770,6 @@ a {
         margin: 0px;
     }
 
-    .helsinkiLogo {
-        width: 150px;
-        margin: 10px;
-        grid-area: helsinkiLogo
-    }
-
-    #NewCo {
-        grid-area: NewCo;
-    }
-
-    #langDropdown {
-        grid-area: langDropdown;
-        justify-self: end;
-    }
-
-    #Palvelut {
-        grid-area: palvelut;
-    }
-
-    .searchIcon {
-        margin: 0 auto;
-        grid-area: searchIcon;
-        width: 50px;
-    }
-
-    .dropdown>p,
-    a {
-        font-size: 1.5rem;
-    }
 
     .mapcontainer {
         height: 600px;
