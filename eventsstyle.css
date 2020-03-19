@@ -1,0 +1,144 @@
+
+.container2 {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: var(--width);
+    overflow: hidden;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: var(--splash-height);
+    width: var(--width);
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.heroImage {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    height: var(--splash-height);
+    min-width: 1400px;
+    z-index: 0;
+
+}
+
+.bgGrey {
+    background-color: var(--UI-grey);
+}
+.overlayImageRight2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 20%;
+    padding: 36px;
+    height: 400px;
+    width: 500px;
+    background-color: var(--UI-grey);
+}
+
+/*Events Styles */
+
+.EventContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    width: var(--width);
+    overflow: hidden;
+    flex-wrap: wrap;
+    background: var(--UI-grey);
+}
+
+.EventCategories {
+    display: flex;
+    justify-content: center;
+
+}
+.EventCards {
+
+    display: flex;
+    flex-direction: column;
+
+}
+.EventCard {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr / 2fr;
+    min-width: 400px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.EventCard a {
+    justify-self: flex-end;
+}
+
+.datetime {
+    grid-row: span 2;
+    place-self: center;
+}
+
+.seeAllButton2 {
+    margin: 1rem;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    background-color: transparent;
+    border: 2px solid var(--bussi);
+    color: var(--bussi);
+    min-height: 56px;
+    flex-basis: 48px auto;
+    flex-grow: 100px;
+    font-weight: bold;
+}
+
+.waveTyrsky {
+    -webkit-mask-image: url("/waves/tyrsky.svg");
+    mask-image: url("/waves/tyrsky.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 95px;
+    z-index: 2;
+
+}
+
+.waveTyrskyUpsideDown {
+    transform: rotate(180deg);
+    -webkit-mask-image: url("/waves/tyrsky.svg");
+    mask-image: url("/waves/tyrsky.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 95px;
+    margin-bottom:50px;
+
+}
+
+.wavePerus {
+    -webkit-mask-image: url("/waves/perus.svg");
+    mask-image: url("/waves/perus.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 28px;
+}
+
+.wavePerusUpsidedown {
+    transform: rotate(180deg);
+    -webkit-mask-image: url("/waves/perus.svg");
+    mask-image: url("/waves/perus.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 28px;
+    z-index: 1;
+}
+
+.mapcontainer {
+    margin-bottom: -28px;
+}
