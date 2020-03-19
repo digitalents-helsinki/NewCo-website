@@ -595,6 +595,44 @@ a {
     color: var(--bussi);
 }
 
+/* VideoSection */
+
+.videoTitle {
+    background-color: var(--UI-grey);
+    text-align: center;
+    padding: 50px;
+}
+
+.videoList {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.Video {
+    background-color: rgb(255, 255, 255);
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.videoPhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.videoText {
+    padding: 40px;
+}
+
+
 /* Wide image with Text box on the right */
 
 .overlayImageLeft {
@@ -902,6 +940,8 @@ a {
         display: flex;
         flex-direction: column;
     }
+
+    /* guideDownloads */
 
     .contentText {
         width: 80%;
