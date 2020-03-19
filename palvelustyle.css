@@ -10,19 +10,26 @@
     color: var(--bussi);
 }
 
-.palvelurajaus {
-    padding: 20px;
-}
-
-
 
 .contentText {
-    margin: 20px;
+    margin: 20px auto;
     width: 50%;
     text-align: center;
     margin: 36px auto;
 }
 
+.palvelurajaus {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+}
+
+.palvelu-filter {
+    padding: 5px;
+
+}
 
 /* Content Cards */
 .contentCards {
