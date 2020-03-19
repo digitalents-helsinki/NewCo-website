@@ -116,24 +116,24 @@ svg {
 
 /* Wave motifs */
 .waveTyrsky {
-    -webkit-mask-image: url("/waves/tyrsky.svg");
-    mask-image: url("/waves/tyrsky.svg");
+    -webkit-mask-image: url("waves/tyrsky.svg");
+    mask-image: url("waves/tyrsky.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 50px;
 }
 
 .waveVarina {
-    -webkit-mask-image: url("/waves/varina.svg");
-    mask-image: url("/waves/varina.svg");
+    -webkit-mask-image: url("waves/varina.svg");
+    mask-image: url("waves/varina.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 50px;
 }
 
 .waveSyke {
-    -webkit-mask-image: url("/waves/syke.svg");
-    mask-image: url("/waves/syke.svg");
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 95px;
@@ -141,8 +141,8 @@ svg {
 
 .waveSykeUpsidedown {
     transform: rotate(180deg);
-    -webkit-mask-image: url("/waves/syke.svg");
-    mask-image: url("/waves/syke.svg");
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 95px;
@@ -150,16 +150,16 @@ svg {
 }
 
 .wavePulssi {
-    -webkit-mask-image: url("/waves/pulssi.svg");
-    mask-image: url("/waves/pulssi.svg");
+    -webkit-mask-image: url("waves/pulssi.svg");
+    mask-image: url("waves/pulssi.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 50px;
 }
 
 .wavePerus {
-    -webkit-mask-image: url("/waves/perus.svg");
-    mask-image: url("/waves/perus.svg");
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 25px;
@@ -167,8 +167,8 @@ svg {
 
 .wavePerusUpsidedown {
     transform: rotate(180deg);
-    -webkit-mask-image: url("/waves/perus.svg");
-    mask-image: url("/waves/perus.svg");
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 250px;
@@ -176,8 +176,8 @@ svg {
 }
 
 .waveTyyni {
-    -webkit-mask-image: url("/waves/tyyni.svg");
-    mask-image: url("/waves/tyyni.svg");
+    -webkit-mask-image: url("waves/tyyni.svg");
+    mask-image: url("waves/tyyni.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 25px;
@@ -786,6 +786,7 @@ a {
     position: relative;
     height: 500px;
     background-color: var(--UI-grey);
+    margin-bottom: 0px;
 }
 
 .textOverlayLeft>p {
@@ -794,7 +795,7 @@ a {
 
 .textOverlayLeft {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 5%;
     width: 30%;
     height: 500px;
