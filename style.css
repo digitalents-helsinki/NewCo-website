@@ -185,14 +185,27 @@ svg {
 
 .navigation {
     display: grid;
-    grid-template-columns: 110px 1fr 100px 100px 200px 1fr 2fr 50px;
+    grid-template-columns: 110px 1fr 100px 110px 200px 1fr 2fr 50px;
     grid-template-rows: auto;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
     grid-gap: 0 10px;
     justify-content: center;
-    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    height: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+    /* background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; */
 }
 
 #NewCo {
@@ -212,13 +225,13 @@ svg {
 }
 
 #Palvelut:hover~#Palvelut-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Palvelut-content:hover {
     overflow: visible;
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -238,12 +251,12 @@ svg {
 }
 
 #Oppaita:hover~#Oppaita-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Oppaita-content:hover {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -258,12 +271,12 @@ svg {
 }
 
 #Tietoa:hover~#Tietoa-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Tietoa-content:hover {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -279,6 +292,8 @@ svg {
 }
 
 #langDropdown-content {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     grid-area: langDropdown-content;
 }
@@ -324,21 +339,7 @@ a {
     right: 8px;
 } */
 
-.dropdown-content {
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    /* background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; */
-}
+
 
 /* .dropdown-content a {
     float: none;
