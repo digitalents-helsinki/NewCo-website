@@ -360,6 +360,10 @@ blockquote footer span {
     height: 100px;
     opacity: 1;
 }
+#langDropdown-content:hover{
+    height: 100px;
+    opacity: 1;
+}
 
 .navigation>p {
     font-size: 1.2rem;
