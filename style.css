@@ -1,11 +1,13 @@
 * {
     --splash-height: 500px;
     --width: 100%;
+
     --Kupari: #80EBD3;
     --UI-grey: #F6F6F8;
     --bussi: #0000bf;
     --suomenlinna: #fad1e3;
     --engel: #fff4BB;
+
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -181,11 +183,67 @@ svg {
     bottom: 25px;
 }
 
+/* Blockquote */
+
+
+/* Blockquote stylized */
+blockquote p {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #000;
+    font-size:24px;
+    font-weight: bold;
+}
+/* Spawning the "Quote mark" */
+blockquote p:before {
+    display: flex;
+    flex-grow: 1;
+    content:'“';
+    padding: 0 15px;
+    margin:0px;
+    font-size:120px;
+    color:var(--Kupari);
+}
+/* Title for quote */
+blockquote header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 1rem;
+    font-size:16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Cited person */
+blockquote footer cite {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 0rem;
+    margin: 0rem;
+    font-weight: bold;
+    font-style:normal;
+    padding:0 110px;
+
+}
+/* Job title */
+blockquote footer span {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 1.6rem 0;
+    padding:0 110px;
+
+}
+
 /* Navigation bar */
 
 .navigation {
     display: grid;
     grid-template-columns: 110px 1fr 100px 110px 200px 1fr 2fr 50px;
+
     grid-template-rows: auto;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
@@ -339,7 +397,21 @@ a {
     right: 8px;
 } */
 
-
+.dropdown-content {
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    /* background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; */
+}
 
 /* .dropdown-content a {
     float: none;
@@ -359,7 +431,6 @@ a {
 .dropdown-content:hover~.dropbtn {
     border-bottom: 2px solid black;
 }
-
 .dropdown-content:hover {
     height: 200px;
 }
@@ -591,7 +662,6 @@ a {
     margin-left: 10%;
     height: var(--splash-height);
     width: 700px;
-
 }
 
 /* Quote carousel */
@@ -601,9 +671,8 @@ a {
     justify-content: center;
     align-items: center;
     height: 400px;
-    border: 5px solid black;
+    border: none;
     margin: 10%;
-
 }
 
 /* Email Subscription box */
@@ -776,10 +845,8 @@ a {
     /* footer */
 
     .footerbox {
-
         bottom: 30%;
     }
-
 
 }
 
