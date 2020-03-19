@@ -7,7 +7,7 @@
     --bussi: #0000bf;
     --suomenlinna: #fad1e3;
     --engel: #fff4BB;
-    
+
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -242,14 +242,28 @@ blockquote footer span {
 
 .navigation {
     display: grid;
-    grid-template-columns: 110px 1fr 100px 100px 200px 1fr 2fr 50px;
+    grid-template-columns: 110px 1fr 100px 110px 200px 1fr 2fr 50px;
+
     grid-template-rows: auto;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
     grid-gap: 0 10px;
     justify-content: center;
-    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    height: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+    /* background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; */
 }
 
 #NewCo {
@@ -269,13 +283,13 @@ blockquote footer span {
 }
 
 #Palvelut:hover~#Palvelut-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Palvelut-content:hover {
     overflow: visible;
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -295,12 +309,12 @@ blockquote footer span {
 }
 
 #Oppaita:hover~#Oppaita-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Oppaita-content:hover {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -315,12 +329,12 @@ blockquote footer span {
 }
 
 #Tietoa:hover~#Tietoa-content {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
 #Tietoa-content:hover {
-    height: 200px;
+    height: 250px;
     opacity: 1;
 }
 
@@ -328,8 +342,6 @@ blockquote footer span {
     grid-area: searchIcon;
     justify-self: end;
     align-self: center;
-
-
 }
 
 #langDropdown {
@@ -338,6 +350,8 @@ blockquote footer span {
 }
 
 #langDropdown-content {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     grid-area: langDropdown-content;
 }
@@ -417,7 +431,6 @@ a {
 .dropdown-content:hover~.dropbtn {
     border-bottom: 2px solid black;
 }
-
 .dropdown-content:hover {
     height: 200px;
 }
@@ -463,8 +476,8 @@ a {
 .pageTitleText {
     margin: 50px;
     position: absolute;
-    margin-top: 5%;
-    margin-right: 50%;
+    margin-top: 75px;
+    left: 5%;
     min-width: 300px;
     width: 500px;
     line-height: 5rem;
@@ -479,7 +492,6 @@ a {
 /* Content Cards */
 
 .contentText {
-    margin: 20px;
     width: 50%;
     text-align: center;
     margin: 36px auto;
@@ -650,7 +662,6 @@ a {
     margin-left: 10%;
     height: var(--splash-height);
     width: 700px;
-
 }
 
 /* Quote carousel */
@@ -834,9 +845,75 @@ a {
     /* footer */
 
     .footerbox {
-
         bottom: 30%;
     }
 
+}
 
+@media only screen and (max-width: 720px) {
+    .navigation {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "helsinkiLogo NewCo  "
+            "Palvelut ."
+            "Palvelut-content ."
+            "Tapahtumat ."
+            "Oppaita ."
+            "Oppaita-content ."
+            "Tietoa ."
+            "Tietoa-content ."
+            "searchIcon langDropdown";
+        justify-items: left;
+        align-content: left;
+        margin-left: 20px;
+    }
+
+    .dropdown-content {
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        /* background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; */
+    }
+
+    #Palvelut:hover~#Palvelut-content {
+        height: 270px;
+        opacity: 1;
+    }
+    
+    #Palvelut-content:hover {
+        overflow: visible;
+        height: 270px;
+        opacity: 1;
+    }
+
+    .footerText {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentText {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .guideDownloads {
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: var(--UI-grey);
+    }
 }
