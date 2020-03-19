@@ -531,6 +531,10 @@ a {
     height: 50px;
 }
 
+.readMore{
+    margin-top: 50px;
+}
+
 .readMore>a {
     position: relative;
     color: var(--bussi);
@@ -551,6 +555,38 @@ a {
     color: white;
 }
 
+/* NewsCards */
+
+.newsCards {
+    padding: 20px 0 50px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.News{
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.newsPhoto{
+        width: 100%;
+        height: 225px;
+}
+
+.newsText {
+    padding: 40px;
+}
+
+
 /* guideDownloads */
 
 .guideTitle {
@@ -560,7 +596,7 @@ a {
 }
 
 .guideDownloads {
-    padding: 50px;
+    padding: 30px 0px 75px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
