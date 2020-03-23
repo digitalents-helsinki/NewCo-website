@@ -267,11 +267,15 @@ blockquote footer span {
 
 .dropdown-content {
     height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    white-space: nowrap;
     /* background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -290,20 +294,9 @@ blockquote footer span {
 }
 
 #Palvelut-content {
-    opacity: 0;
     grid-area: Palvelut-content;
 }
 
-#Palvelut:hover~#Palvelut-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Palvelut-content:hover {
-    overflow: visible;
-    height: 250px;
-    opacity: 1;
-}
 
 #Tapahtumat {
     align-self: center;
@@ -316,18 +309,7 @@ blockquote footer span {
 }
 
 #Oppaita-content {
-    opacity: 0;
     grid-area: Oppaita-content;
-}
-
-#Oppaita:hover~#Oppaita-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Oppaita-content:hover {
-    height: 250px;
-    opacity: 1;
 }
 
 #Tietoa {
@@ -336,18 +318,7 @@ blockquote footer span {
 }
 
 #Tietoa-content {
-    opacity: 0;
     grid-area: Tietoa-content;
-}
-
-#Tietoa:hover~#Tietoa-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Tietoa-content:hover {
-    height: 250px;
-    opacity: 1;
 }
 
 #searchIcon {
@@ -366,15 +337,6 @@ blockquote footer span {
     flex-direction: column;
     opacity: 0;
     grid-area: langDropdown-content;
-}
-
-#langDropdown:hover~#langDropdown-content {
-    height: 100px;
-    opacity: 1;
-}
-#langDropdown-content:hover{
-    height: 100px;
-    opacity: 1;
 }
 
 .navigation>p {
@@ -401,33 +363,17 @@ blockquote footer span {
 a {
     font-size: 1.2rem;
 }
-
+*/
 .dropbtn {
-    margin: 15px;
-    position: relative;
+    background-color: white;
+    z-index: 2;
 }
-
+/*
 .dropbtn>img {
     position: relative;
     top: 7px;
     right: 8px;
 } */
-
-.dropdown-content {
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    /* background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; */
-}
 
 /* .dropdown-content a {
     float: none;
@@ -456,6 +402,12 @@ a {
     grid-area: searchIcon;
 }
 
+*/
+.active{
+    opacity: 1;
+    display: block;
+    height: 250px;
+}
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -954,7 +906,7 @@ ul.personelInfo li.name {
 @media only screen and (max-width: 720px) {
     .navigation {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 200px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "helsinkiLogo NewCo  "
@@ -964,9 +916,9 @@ ul.personelInfo li.name {
             "Oppaita ."
             "Oppaita-content ."
             "Tietoa ."
-            "Tietoa-content ."
-            "searchIcon langDropdown";
+            "Tietoa-content .";
         justify-items: left;
+        text-align: center;
         align-content: left;
         margin-left: 20px;
     }
@@ -996,6 +948,18 @@ ul.personelInfo li.name {
         height: 270px;
         opacity: 1;
     }
+
+    #searchIcon{
+        display: none;
+    }
+
+    #langDropdown{
+        display: none;
+    }
+    #langDropdown-content{
+        display: none;
+    }
+    /* Footer */
 
     .footerText {
         position: relative;
