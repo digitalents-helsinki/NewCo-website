@@ -122,7 +122,7 @@ body {
     background-color: var(--engel);
     padding: 40px;
     width: 80%;
-    height: 300px;
+    height: 250px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 50px;
