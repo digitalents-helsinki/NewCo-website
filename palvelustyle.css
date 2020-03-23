@@ -74,16 +74,18 @@
 
 /* hub stuff */
 .overlayImageHub {
+    position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 2;
-    position: relative;
+    top: 10%;
+    left: 20%;
+    padding: 36px;
     height: 400px;
     width: 500px;
     background-color: white;
-    padding: 30px;
-    font-size: 1.2rem;
-    left: 10vw;
-    top: 50px;
+    font-size: 1.1rem;
 
+}
+.overlayImageRight {
+    background-color: var(--Kupari);
 }
