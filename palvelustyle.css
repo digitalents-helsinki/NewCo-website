@@ -189,3 +189,18 @@ body {
     height: 3.5rem;
     float: right;
 }
+
+/* Palvelut2 pages stylings below */
+
+.ajanvaraus {
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+.varaus-link {
+    border: solid 2px var(--bussi);
+    padding: 15px;
+    margin: 20px;
+    color: white;
+    background-color: var(--bussi);
+}
