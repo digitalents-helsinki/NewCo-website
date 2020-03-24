@@ -192,15 +192,57 @@ body {
 
 /* Palvelut2 pages stylings below */
 
+
+
 .ajanvaraus {
     margin: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .varaus-link {
     border: solid 2px var(--bussi);
-    padding: 15px;
-    margin: 20px;
+    padding: 20px;
     color: white;
     background-color: var(--bussi);
+}
+
+.waveVarina {
+    -webkit-mask-image: url("/waves/varina.svg");
+    mask-image: url("/waves/varina.svg");
+    -webkit-mask-size: cover;
+    mask-size: contain;
+    bottom: 0;
+    mask-repeat: repeat;
+}
+
+.timestableContainer {
+    background-color: var(--UI-grey);
+    padding: 60px;
+}
+
+.timestableContainer >h4 {
+   font-weight: normal;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 20px;
+}
+
+.timestable {
+    margin: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.imgContainer{
+    justify-items: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+.imgContainer >img {
+    float: right;
+}
+.timesContainer {
+    padding-bottom: 50px;
 }

@@ -110,6 +110,10 @@ svg {
     background-color: var(--UI-grey);
 }
 
+.waveWhite {
+    background-color: white;
+}
+
 .waveSuomenlinna {
     background-color: var(--suomenlinna);
 }
@@ -751,9 +755,7 @@ a {
     width: 60%;
 }
 
-#yrittäjyydestäCheckbox {}
 
-#tapahtumistaCheckbox {}
 
 /* Big images 2  */
 
