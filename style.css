@@ -23,6 +23,12 @@ a {
     /* no underline */
 }
 
+/* TODO: needs to be changed later on and make normal <a></a> links blue and setup menus with different colors. */
+a.inline {
+    color:var(--bussi);
+    text-decoration:underline;
+}
+
 
 body {
     background-color: rgb(240, 240, 240);
@@ -40,7 +46,7 @@ h3 {
     max-width: 1440px;
     background-color: white;
     margin: 0 auto;
-
+    overflow: hidden;
 }
 
 .container {
@@ -50,8 +56,14 @@ h3 {
     height: var(--splash-height);
     width: var(--width);
     margin-bottom: 100px;
-    overflow: hidden;
 }
+
+/* if header doesn't have underlying picture, this should be applied */
+.container.no-header-image {
+    height: 280px;
+    margin-bottom: 10px;
+}
+
 
 .wideImage {
     background-size: cover;
@@ -163,6 +175,7 @@ svg {
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 25px;
+
 }
 
 .wavePerusUpsidedown {
@@ -172,7 +185,6 @@ svg {
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 250px;
-    bottom: 25px;
 }
 
 .waveTyyni {
@@ -255,11 +267,15 @@ blockquote footer span {
 
 .dropdown-content {
     height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    white-space: nowrap;
     /* background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -278,20 +294,9 @@ blockquote footer span {
 }
 
 #Palvelut-content {
-    opacity: 0;
     grid-area: Palvelut-content;
 }
 
-#Palvelut:hover~#Palvelut-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Palvelut-content:hover {
-    overflow: visible;
-    height: 250px;
-    opacity: 1;
-}
 
 #Tapahtumat {
     align-self: center;
@@ -304,18 +309,7 @@ blockquote footer span {
 }
 
 #Oppaita-content {
-    opacity: 0;
     grid-area: Oppaita-content;
-}
-
-#Oppaita:hover~#Oppaita-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Oppaita-content:hover {
-    height: 250px;
-    opacity: 1;
 }
 
 #Tietoa {
@@ -324,18 +318,7 @@ blockquote footer span {
 }
 
 #Tietoa-content {
-    opacity: 0;
     grid-area: Tietoa-content;
-}
-
-#Tietoa:hover~#Tietoa-content {
-    height: 250px;
-    opacity: 1;
-}
-
-#Tietoa-content:hover {
-    height: 250px;
-    opacity: 1;
 }
 
 #searchIcon {
@@ -354,15 +337,6 @@ blockquote footer span {
     flex-direction: column;
     opacity: 0;
     grid-area: langDropdown-content;
-}
-
-#langDropdown:hover~#langDropdown-content {
-    height: 100px;
-    opacity: 1;
-}
-#langDropdown-content:hover{
-    height: 100px;
-    opacity: 1;
 }
 
 .navigation>p {
@@ -389,33 +363,17 @@ blockquote footer span {
 a {
     font-size: 1.2rem;
 }
-
+*/
 .dropbtn {
-    margin: 15px;
-    position: relative;
+    background-color: white;
+    z-index: 2;
 }
-
+/*
 .dropbtn>img {
     position: relative;
     top: 7px;
     right: 8px;
 } */
-
-.dropdown-content {
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    /* background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; */
-}
 
 /* .dropdown-content a {
     float: none;
@@ -444,6 +402,12 @@ a {
     grid-area: searchIcon;
 }
 
+*/
+.active{
+    opacity: 1;
+    display: block;
+    height: 250px;
+}
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -493,6 +457,52 @@ a {
 }
 
 
+/* Yhteystiedot profile cards */
+
+h4.dividerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--UI-grey);
+}
+img.profilePicture {
+    border-radius: 50%;
+    width:15rem;
+    height:15rem;
+}
+div.personel {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+.personelText {
+    padding: 40px;
+}
+.personelMain {
+    padding: 50px 50px 200px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+ul.personelInfo > li {
+    list-style-type: none;
+}
+ul.personelInfo li.name {
+    font-weight:bold;
+}
+
 /* Content Cards */
 
 .contentText {
@@ -502,10 +512,12 @@ a {
 }
 
 .contentCards {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 10px;
+    padding: 30px 0px 75px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .Card {
@@ -529,10 +541,6 @@ a {
 
 .cardIcon {
     height: 50px;
-}
-
-.readMore{
-    margin-top: 50px;
 }
 
 .readMore>a {
@@ -586,7 +594,6 @@ a {
     padding: 40px;
 }
 
-
 /* guideDownloads */
 
 .guideTitle {
@@ -596,7 +603,7 @@ a {
 }
 
 .guideDownloads {
-    padding: 30px 0px 75px 0px;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -932,7 +939,7 @@ a {
 @media only screen and (max-width: 720px) {
     .navigation {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 200px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "helsinkiLogo NewCo  "
@@ -942,9 +949,9 @@ a {
             "Oppaita ."
             "Oppaita-content ."
             "Tietoa ."
-            "Tietoa-content ."
-            "searchIcon langDropdown";
+            "Tietoa-content .";
         justify-items: left;
+        text-align: center;
         align-content: left;
         margin-left: 20px;
     }
@@ -974,6 +981,18 @@ a {
         height: 270px;
         opacity: 1;
     }
+
+    #searchIcon{
+        display: none;
+    }
+
+    #langDropdown{
+        display: none;
+    }
+    #langDropdown-content{
+        display: none;
+    }
+    /* Footer */
 
     .footerText {
         position: relative;
