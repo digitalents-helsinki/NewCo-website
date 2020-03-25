@@ -7,7 +7,7 @@
     --bussi: #0000bf;
     --suomenlinna: #fad1e3;
     --engel: #fff4BB;
-    
+
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -23,45 +23,30 @@ a {
     /* no underline */
 }
 
+/* TODO: needs to be changed later on and make normal <a></a> links blue and setup menus with different colors. */
+a.inline {
+    color:var(--bussi);
+    text-decoration:underline;
+}
+
 
 body {
     background-color: rgb(240, 240, 240);
-    font-size: 16px;
 }
 
-h1 {
-    margin-bottom: 16px;
-    font-size: 3.25rem;
-    font-weight: bold;
-}
-h2 {
-
-    margin-bottom: 16px;
-    font-size: 2.25rem;
-    font-weight: bold;
-}
+h1,
+h2,
 h3 {
     margin-bottom: 16px;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 2.5rem;
 }
-/* Section name font */
-h5 {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-}
-/* highlighted body text */
-h6 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-}
+
 .wrapper {
     width: var(--width);
-    max-width: 1400px;
+    max-width: 1440px;
     background-color: white;
     margin: 0 auto;
-
+    overflow: hidden;
 }
 
 .container {
@@ -71,16 +56,21 @@ h6 {
     height: var(--splash-height);
     width: var(--width);
     margin-bottom: 100px;
-    overflow: hidden;
 }
+
+/* if header doesn't have underlying picture, this should be applied */
+.container.no-header-image {
+    height: 280px;
+    margin-bottom: 10px;
+}
+
 
 .wideImage {
     background-size: cover;
     background-position: center center;
-    position: relative;
+    position: absolute;
     height: var(--splash-height);
-    min-width: 1400px;
-    top: 28px;
+    min-width: 1440px;
 
 }
 
@@ -138,24 +128,22 @@ svg {
 
 /* Wave motifs */
 .waveTyrsky {
-    -webkit-mask-image: url("/waves/tyrsky.svg");
-    mask-image: url("/waves/tyrsky.svg");
+    -webkit-mask-image: url("waves/tyrsky.svg");
+    mask-image: url("waves/tyrsky.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-
 }
 
 .waveVarina {
-    -webkit-mask-image: url("/waves/varina.svg");
-    mask-image: url("/waves/varina.svg");
+    -webkit-mask-image: url("waves/varina.svg");
+    mask-image: url("waves/varina.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom: 50px;
 }
 
 .waveSyke {
-    -webkit-mask-image: url("/waves/syke.svg");
-    mask-image: url("/waves/syke.svg");
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 95px;
@@ -163,8 +151,8 @@ svg {
 
 .waveSykeUpsidedown {
     transform: rotate(180deg);
-    -webkit-mask-image: url("/waves/syke.svg");
-    mask-image: url("/waves/syke.svg");
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 95px;
@@ -172,16 +160,16 @@ svg {
 }
 
 .wavePulssi {
-    -webkit-mask-image: url("/waves/pulssi.svg");
-    mask-image: url("/waves/pulssi.svg");
+    -webkit-mask-image: url("waves/pulssi.svg");
+    mask-image: url("waves/pulssi.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 50px;
 }
 
 .wavePerus {
-    -webkit-mask-image: url("/waves/perus.svg");
-    mask-image: url("/waves/perus.svg");
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
 
@@ -189,17 +177,16 @@ svg {
 
 .wavePerusUpsidedown {
     transform: rotate(180deg);
-    -webkit-mask-image: url("/waves/perus.svg");
-    mask-image: url("/waves/perus.svg");
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     height: 250px;
-    bottom: 25px;
 }
 
 .waveTyyni {
-    -webkit-mask-image: url("/waves/tyyni.svg");
-    mask-image: url("/waves/tyyni.svg");
+    -webkit-mask-image: url("waves/tyyni.svg");
+    mask-image: url("waves/tyyni.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     bottom: 25px;
@@ -264,14 +251,32 @@ blockquote footer span {
 
 .navigation {
     display: grid;
-    grid-template-columns: 110px 1fr 100px 100px 200px 1fr 2fr 50px;
+    grid-template-columns: 110px 1fr 100px 110px 200px 1fr 2fr 50px;
+
     grid-template-rows: auto;
     grid-template-areas:
         "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
     grid-gap: 0 10px;
     justify-content: center;
-    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    /* background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; */
 }
 
 #NewCo {
@@ -286,20 +291,9 @@ blockquote footer span {
 }
 
 #Palvelut-content {
-    opacity: 0;
     grid-area: Palvelut-content;
 }
 
-#Palvelut:hover~#Palvelut-content {
-    height: 200px;
-    opacity: 1;
-}
-
-#Palvelut-content:hover {
-    overflow: visible;
-    height: 200px;
-    opacity: 1;
-}
 
 #Tapahtumat {
     align-self: center;
@@ -312,18 +306,7 @@ blockquote footer span {
 }
 
 #Oppaita-content {
-    opacity: 0;
     grid-area: Oppaita-content;
-}
-
-#Oppaita:hover~#Oppaita-content {
-    height: 200px;
-    opacity: 1;
-}
-
-#Oppaita-content:hover {
-    height: 200px;
-    opacity: 1;
 }
 
 #Tietoa {
@@ -332,26 +315,13 @@ blockquote footer span {
 }
 
 #Tietoa-content {
-    opacity: 0;
     grid-area: Tietoa-content;
-}
-
-#Tietoa:hover~#Tietoa-content {
-    height: 200px;
-    opacity: 1;
-}
-
-#Tietoa-content:hover {
-    height: 200px;
-    opacity: 1;
 }
 
 #searchIcon {
     grid-area: searchIcon;
     justify-self: end;
     align-self: center;
-
-
 }
 
 #langDropdown {
@@ -360,13 +330,10 @@ blockquote footer span {
 }
 
 #langDropdown-content {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     grid-area: langDropdown-content;
-}
-
-#langDropdown:hover~#langDropdown-content {
-    height: 100px;
-    opacity: 1;
 }
 
 .navigation>p {
@@ -393,33 +360,17 @@ blockquote footer span {
 a {
     font-size: 1.2rem;
 }
-
+*/
 .dropbtn {
-    margin: 15px;
-    position: relative;
+    background-color: white;
+    z-index: 2;
 }
-
+/*
 .dropbtn>img {
     position: relative;
     top: 7px;
     right: 8px;
 } */
-
-.dropdown-content {
-    height: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    /* background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; */
-}
 
 /* .dropdown-content a {
     float: none;
@@ -439,7 +390,6 @@ a {
 .dropdown-content:hover~.dropbtn {
     border-bottom: 2px solid black;
 }
-
 .dropdown-content:hover {
     height: 200px;
 }
@@ -449,6 +399,12 @@ a {
     grid-area: searchIcon;
 }
 
+*/
+.active{
+    opacity: 1;
+    display: block;
+    height: 250px;
+}
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -485,8 +441,8 @@ a {
 .pageTitleText {
     margin: 50px;
     position: absolute;
-    margin-top: 5%;
-    margin-right: 50%;
+    margin-top: 75px;
+    left: 5%;
     min-width: 300px;
     width: 500px;
     line-height: 5rem;
@@ -498,20 +454,67 @@ a {
 }
 
 
+/* Yhteystiedot profile cards */
+
+h4.dividerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--UI-grey);
+}
+img.profilePicture {
+    border-radius: 50%;
+    width:15rem;
+    height:15rem;
+}
+div.personel {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+.personelText {
+    padding: 40px;
+}
+.personelMain {
+    padding: 50px 50px 200px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+ul.personelInfo > li {
+    list-style-type: none;
+}
+ul.personelInfo li.name {
+    font-weight:bold;
+}
+
 /* Content Cards */
 
 .contentText {
-    margin: 20px;
     width: 50%;
     text-align: center;
     margin: 36px auto;
 }
 
 .contentCards {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 10px;
+    padding: 30px 0px 75px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .Card {
@@ -557,7 +560,36 @@ a {
     color: white;
 }
 
+/* NewsCards */
 
+.newsCards {
+    padding: 20px 0 50px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.News{
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.newsPhoto{
+        width: 100%;
+        height: 225px;
+}
+
+.newsText {
+    padding: 40px;
+}
 
 /* guideDownloads */
 
@@ -606,6 +638,44 @@ a {
 .downloadGuideButton>a {
     color: var(--bussi);
 }
+
+/* VideoSection */
+
+.videoTitle {
+    background-color: var(--UI-grey);
+    text-align: center;
+    padding: 50px;
+}
+
+.videoList {
+    padding: 30px 0px 75px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.Video {
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.videoPhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.videoText {
+    padding: 40px;
+}
+
 
 /* Wide image with Text box on the right */
 
@@ -674,7 +744,6 @@ a {
     margin-left: 10%;
     height: var(--splash-height);
     width: 700px;
-
 }
 
 /* Quote carousel */
@@ -748,6 +817,7 @@ a {
     height: 400px;
     width: 30%;
     background-color: var(--suomenlinna);
+    font-size: 1.1rem;
 }
 
 /* map */
@@ -756,6 +826,7 @@ a {
     position: relative;
     height: 500px;
     background-color: var(--UI-grey);
+    margin-bottom: 0px;
 }
 
 .textOverlayLeft>p {
@@ -764,6 +835,7 @@ a {
 
 .textOverlayLeft {
     position: absolute;
+    top: 50px;
     left: 5%;
     width: 30%;
     height: 500px;
@@ -856,9 +928,89 @@ a {
     /* footer */
 
     .footerbox {
-
         bottom: 30%;
     }
 
+}
 
+@media only screen and (max-width: 720px) {
+    .navigation {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "helsinkiLogo NewCo  "
+            "Palvelut ."
+            "Palvelut-content ."
+            "Tapahtumat ."
+            "Oppaita ."
+            "Oppaita-content ."
+            "Tietoa ."
+            "Tietoa-content .";
+        justify-items: left;
+        text-align: center;
+        align-content: left;
+        margin-left: 20px;
+    }
+
+    .dropdown-content {
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        /* background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; */
+    }
+
+    #Palvelut:hover~#Palvelut-content {
+        height: 270px;
+        opacity: 1;
+    }
+    
+    #Palvelut-content:hover {
+        overflow: visible;
+        height: 270px;
+        opacity: 1;
+    }
+
+    #searchIcon{
+        display: none;
+    }
+
+    #langDropdown{
+        display: none;
+    }
+    #langDropdown-content{
+        display: none;
+    }
+    /* Footer */
+
+    .footerText {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* guideDownloads */
+
+    .contentText {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .guideDownloads {
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: var(--UI-grey);
+    }
 }
