@@ -1,7 +1,7 @@
     
 
 /* HEL BRAND COLORS */
-
+* {
         /* 
            Spåra //####// Main color // Light:20% // Light:50% // Dark:50%
         */
@@ -128,3 +128,4 @@
         --Black-70:#4C4C4C;
         --Black-80:#333333;
         --Black-90:#1A1A1A;
+}
