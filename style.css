@@ -372,8 +372,6 @@ a {
 
 
 .navigation>.dropbtn {
-    text-align: start;
-    height: 20px;
     font-size: 0.9rem;
     cursor: pointer;
     background-color: white;
@@ -409,6 +407,7 @@ span {
     color: black;
     text-decoration: none;
     text-align: left;
+    font-weight: bold;
 }
 
 /*
