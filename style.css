@@ -504,6 +504,130 @@ a {
     font-size: 3rem;
 }
 
+/* Singular News Article */
+h4.dividerDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:normal;
+}
+
+img.newsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight:normal;
+    width:70%;
+
+}
+
+
+.contentNews {
+    width: 100%;
+    text-align: center;
+    margin: 36px auto;
+}
+.contentNews .innerContentNews {
+    width: 50%;
+    text-align: center;
+    margin: 36px auto;
+    text-align:left;
+}
+
+.contentNews .innerContentNews > p {
+    padding:0 0 4%;
+}
+
+/* More news section */
+img.smallerNewsImg {
+    width:100%;
+    height:50%;
+}
+div.mNews {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+div.mNewsCenter {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 50px;
+    font-size: 1.2rem;
+    
+}
+.mNewsText {
+    padding: 40px;
+    background: white;
+}
+
+.mNewsDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    padding: 0 0 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size:15px;
+}
+
+.mNewsReadMore:first-letter {
+    text-transform: capitalize;
+}
+
+.mNewsReadMore a.inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    padding: 2rem 0 0.2rem;
+    text-decoration: none;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing: -1px;
+}
+
+.mNewsMain {
+    padding: 100px 50px 100px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+ul.personelInfo > li {
+    list-style-type: none;
+}
+ul.personelInfo li.name {
+    font-weight:bold;
+}
+.Button {
+    margin: 20px;
+    padding: 15px;
+    color: var(--bussi);
+    border: 2px solid var(--bussi);
+}
+
+.Button>a {
+    color: var(--bussi);
+}
 
 /* Yhteystiedot profile cards */
 
