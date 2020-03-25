@@ -194,6 +194,7 @@ svg {
     height: 250px;
 }
 
+
 .waveTyyni {
     -webkit-mask-image: url("waves/tyyni.svg");
     mask-image: url("waves/tyyni.svg");
@@ -410,26 +411,6 @@ span {
     font-weight: bold;
 }
 
-/*
-
-
-.dropbtn:hover {
-    border-bottom: 2px solid black;
-}
-
-.dropdown-content:hover~.dropbtn {
-    border-bottom: 2px solid black;
-}
-.dropdown-content:hover {
-    height: 200px;
-}
-
-.searchIcon {
-    margin-left: auto;
-    grid-area: searchIcon;
-}
-
-*/
 .active {
     opacity: 1;
     display: block;
@@ -449,6 +430,12 @@ span {
     height: var(--splash-height);
     right: 10%;
     width: 100%;
+}
+
+.diagonal-overlay-mobile {
+    display: none;
+    height: 400px;
+    top: 300px;
 }
 
 .HeaderText {
@@ -700,7 +687,6 @@ ul.personelInfo li.name {
 
 
 .contentCards {
-    padding: 30px 0px 75px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -714,9 +700,9 @@ ul.personelInfo li.name {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    width: 300px;
-    height: 400px;
-    margin: 10px auto;
+    width: 333px;
+    height: 430px;
+    margin: 10px;
     padding: 20px;
     font-size: 1.2rem;
 }
@@ -1051,21 +1037,24 @@ ul.personelInfo li.name {
 
 .mapcontainer {
     position: relative;
+    display: flex;
+    flex-direction: row;
     height: 500px;
     background-color: var(--UI-grey);
     margin-bottom: 0px;
+    height: var(--splash-height);
+    width: var(--width);
 }
 
 .textOverlayLeft>p {
     margin-bottom: 20px;
 }
 
-.textOverlayLeft {
+.mapTextOverlay {
     position: absolute;
     top: 50px;
     left: 5%;
     width: 30%;
-    height: 500px;
 }
 
 .map {
@@ -1091,6 +1080,7 @@ ul.personelInfo li.name {
 }
 
 .footerbox {
+    text-align: center;
     position: relative;
     bottom: 50%;
 }
@@ -1161,6 +1151,10 @@ ul.personelInfo li.name {
 }
 
 @media only screen and (max-width: 720px) {
+    .container {
+        margin-bottom: 0px;
+        height: 750px;
+    }
     .navigation {
         display: grid;
         grid-template-columns: 200px 1fr;
@@ -1195,16 +1189,6 @@ ul.personelInfo li.name {
         z-index: 1; */
     }
 
-    #Palvelut:hover~#Palvelut-content {
-        height: 270px;
-        opacity: 1;
-    }
-
-    #Palvelut-content:hover {
-        overflow: visible;
-        height: 270px;
-        opacity: 1;
-    }
 
     #searchIcon {
         display: none;
@@ -1218,6 +1202,84 @@ ul.personelInfo li.name {
         display: none;
     }
 
+    /* Header Image */
+
+    .diagonal-overlay-mobile {
+        display: inline;
+    }
+    .diagonal-overlay {
+        display: none;
+    }
+
+    .HeaderText {
+        top: 50%;
+        left: 0;
+        min-width: 200px;
+        width: 80%;
+    }
+
+    /* Content Cards */
+
+    .seeAllButton {
+        width: 80%;
+    }
+
+    /* Overlay images */
+    
+    .overlayImageRight {
+        top: 200px;
+        left: 5%;
+        width: 500px;
+    }
+
+    .overlayImageLeft {
+        top: 200px;
+        left: 0;
+        right: 0;
+        width: 90%;
+    }
+
+    .squareImageLeft{
+        left:0;
+    }
+    /* Quote Carousel */ 
+    .quoteCarousel {
+        height: 550px
+    }
+
+    /* email subscription */ 
+
+    .emailSubscription {
+        margin-bottom: 50px;
+    }
+
+    /* map */ 
+
+    .mapcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 850px;
+    }
+
+    .mapTextOverlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+    }
+    
+    .map {
+        text-align: center;
+        border: 20px solid white;
+        background-color: var(--UI-grey);
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 400px;
+        width: 90%;
+    }
     /* Footer */
 
     .footerText {
@@ -1225,6 +1287,9 @@ ul.personelInfo li.name {
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     /* guideDownloads */
