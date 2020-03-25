@@ -126,6 +126,10 @@ svg {
     background-color: var(--suomenlinna);
 }
 
+.waveEngel {
+    background-color: var(--engel);
+}
+
 /* Wave motifs */
 .waveTyrsky {
     -webkit-mask-image: url("waves/tyrsky.svg");
@@ -371,7 +375,7 @@ a {
     font-size: 1.2rem;
 }
 */
-.dropbtn {
+.navigation > .dropbtn {
     background-color: white;
     z-index: 2;
 }
