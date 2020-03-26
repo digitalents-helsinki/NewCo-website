@@ -1,13 +1,6 @@
 * {
     --splash-height: 500px;
     --width: 100%;
-
-    --Kupari: #80EBD3;
-    --UI-grey: #F6F6F8;
-    --bussi: #0000bf;
-    --suomenlinna: #fad1e3;
-    --engel: #fff4BB;
-
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -18,14 +11,14 @@
 
 
 a {
-    color: black;
+    color: var(--Musta);
     text-decoration: none;
     /* no underline */
 }
 
 /* TODO: needs to be changed later on and make normal <a></a> links blue and setup menus with different colors. */
 a.inline {
-    color: var(--bussi);
+    color: var(--Bussi);
     text-decoration: underline;
 }
 
@@ -44,7 +37,7 @@ h3 {
 .wrapper {
     width: var(--width);
     max-width: 1440px;
-    background-color: white;
+    background-color: var(--Valkoinen);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -123,11 +116,11 @@ svg {
 }
 
 .waveSuomenlinna {
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna);
 }
 
 .waveEngel {
-    background-color: var(--engel);
+    background-color: var(--Engel);
 }
 
 /* Wave motifs */
@@ -210,7 +203,7 @@ blockquote p {
     display: flex;
     align-items: center;
     padding: 15px;
-    color: #000;
+    color: var(--Musta);
     font-size: 24px;
     font-weight: bold;
 }
@@ -376,7 +369,7 @@ a {
 }
 */
 .navigation > .dropbtn {
-    background-color: white;
+    background-color: var(--Valkoinen);
     z-index: 2;
 }
 
@@ -539,7 +532,7 @@ div.mNewsCenter {
 }
 .mNewsText {
     padding: 40px;
-    background: white;
+    background: var(--Valkoinen);
 }
 
 .mNewsDate {
@@ -586,12 +579,12 @@ ul.personelInfo li.name {
 .Button {
     margin: 20px;
     padding: 15px;
-    color: var(--bussi);
-    border: 2px solid var(--bussi);
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
 }
 
 .Button>a {
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 /* Yhteystiedot profile cards */
@@ -711,12 +704,12 @@ ul.personelInfo li.name {
 
 .readMore>a {
     position: relative;
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 .cardArrow {
     margin: 0 5px;
-    color: var(--bussi);
+    color: var(--Bussi);
     filter: invert(30%) sepia(55%) saturate(7412%) hue-rotate(230deg) brightness(96%) contrast(91%);
 }
 
@@ -724,7 +717,7 @@ ul.personelInfo li.name {
     margin: 50px auto;
     text-align: center;
     padding: 10px;
-    background-color: var(--bussi);
+    background-color: var(--Bussi);
     width: 20%;
     color: white;
 }
@@ -804,12 +797,12 @@ ul.personelInfo li.name {
 .downloadGuideButton {
     margin: 20px;
     padding: 15px;
-    color: var(--bussi);
-    border: 2px solid var(--bussi);
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
 }
 
 .downloadGuideButton>a {
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 /* VideoSection */
@@ -910,7 +903,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 500px;
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna);
     font-size: 1.1rem;
 }
 
@@ -938,7 +931,7 @@ ul.personelInfo li.name {
 
 .eventsButton {
     padding: 10px;
-    border: 2px solid #1a1a1a;
+    border: 2px solid var(--Black-80);
     margin-top: auto;
     width: 60%;
 }
@@ -979,7 +972,7 @@ ul.personelInfo li.name {
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--engel);
+    background-color: var(--Engel);
     padding: 30px;
     width: 500px;
     height: 500px;
@@ -996,7 +989,7 @@ ul.personelInfo li.name {
 
 .subscriptionBox>form>input {
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--Musta);
 }
 
 #emailInput {
@@ -1020,7 +1013,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 30%;
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna);
     font-size: 1.1rem;
 }
 
