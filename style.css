@@ -140,7 +140,6 @@ svg {
     mask-image: url("waves/varina.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom: 50px;
 }
 
 .waveSyke {
@@ -186,6 +185,7 @@ svg {
     mask-size: cover;
     height: 250px;
 }
+
 
 .waveTyyni {
     -webkit-mask-image: url("waves/tyyni.svg");
@@ -266,6 +266,7 @@ blockquote footer span {
         ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
     grid-gap: 0 10px;
     justify-content: center;
+    align-content: flex-end;
     white-space: nowrap;
 }
 
@@ -280,10 +281,7 @@ blockquote footer span {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    /* background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; */
+
 }
 
 #NewCo {
@@ -304,6 +302,7 @@ blockquote footer span {
 
 #Tapahtumat {
     align-self: center;
+    top: 50px;
     grid-area: Tapahtumat
 }
 
@@ -343,7 +342,8 @@ blockquote footer span {
     grid-area: langDropdown-content;
 }
 
-.navigation>p {
+.navigation>p,
+a {
     font-size: 1.2rem;
 
 }
@@ -355,7 +355,7 @@ blockquote footer span {
 
 }
 
-/*
+
 .navItem {
     margin: 15px;
     text-align: center;
@@ -363,57 +363,51 @@ blockquote footer span {
     align-content: center;
 }
 
-.dropdown>p,
-a {
-    font-size: 1.2rem;
-}
-*/
-.navigation > .dropbtn {
-    background-color: var(--Valkoinen);
+
+.navigation>.dropbtn {
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: white;
     z-index: 2;
+    font-weight: bold;
 }
 
-/*
+
 .dropbtn>img {
     position: relative;
     top: 7px;
-    right: 8px;
-} */
+    right: 3px;
+}
 
-/* .dropdown-content a {
-    float: none;
+.dropdownLink {
+    margin: 10px 0px;
+}
+
+.dropdownLink>a,
+span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 2rem;
+}
+
+.dropdownLink>span {
+    color: gray;
+}
+
+.dropdown-content>a {
+    font-size: 0.9rem;
+    line-height: 2rem;
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
     text-align: left;
+    font-weight: bold;
 }
 
-
-
-.dropbtn:hover {
-    border-bottom: 2px solid black;
-}
-
-.dropdown-content:hover~.dropbtn {
-    border-bottom: 2px solid black;
-}
-.dropdown-content:hover {
-    height: 200px;
-}
-
-.searchIcon {
-    margin-left: auto;
-    grid-area: searchIcon;
-}
-
-*/
 .active {
     opacity: 1;
     display: block;
     height: 250px;
 }
-
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -427,6 +421,12 @@ a {
     height: var(--splash-height);
     right: 10%;
     width: 100%;
+}
+
+.diagonal-overlay-mobile {
+    display: none;
+    height: 400px;
+    top: 300px;
 }
 
 .HeaderText {
@@ -472,7 +472,7 @@ h4.dividerDate {
     padding: 4rem 0 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 img.newsImg {
@@ -483,8 +483,8 @@ img.newsImg {
     padding: 4rem 0 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight:normal;
-    width:70%;
+    font-weight: normal;
+    width: 70%;
 
 }
 
@@ -494,22 +494,24 @@ img.newsImg {
     text-align: center;
     margin: 36px auto;
 }
+
 .contentNews .innerContentNews {
     width: 50%;
     text-align: center;
     margin: 36px auto;
-    text-align:left;
+    text-align: left;
 }
 
-.contentNews .innerContentNews > p {
-    padding:0 0 4%;
+.contentNews .innerContentNews>p {
+    padding: 0 0 4%;
 }
 
 /* More news section */
 img.smallerNewsImg {
-    width:100%;
-    height:50%;
+    width: 100%;
+    height: 50%;
 }
+
 div.mNews {
     max-width: 300px;
     display: flex;
@@ -520,6 +522,7 @@ div.mNews {
     margin: 10px 10px;
     font-size: 1.2rem;
 }
+
 div.mNewsCenter {
     max-width: 300px;
     display: flex;
@@ -528,8 +531,9 @@ div.mNewsCenter {
     text-align: center;
     margin: 100px 0 50px;
     font-size: 1.2rem;
-    
+
 }
+
 .mNewsText {
     padding: 40px;
     background: var(--Valkoinen);
@@ -543,7 +547,7 @@ div.mNewsCenter {
     padding: 0 0 0.2rem;
     text-transform: uppercase;
     letter-spacing: -1px;
-    font-size:15px;
+    font-size: 15px;
 }
 
 .mNewsReadMore:first-letter {
@@ -557,8 +561,8 @@ div.mNewsCenter {
     margin: 0rem;
     padding: 2rem 0 0.2rem;
     text-decoration: none;
-    font-size:15px;
-    font-weight:bold;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing: -1px;
 }
 
@@ -570,12 +574,15 @@ div.mNewsCenter {
     justify-content: center;
     background-color: var(--UI-grey);
 }
-ul.personelInfo > li {
+
+ul.personelInfo>li {
     list-style-type: none;
 }
+
 ul.personelInfo li.name {
-    font-weight:bold;
+    font-weight: bold;
 }
+
 .Button {
     margin: 20px;
     padding: 15px;
@@ -671,7 +678,6 @@ ul.personelInfo li.name {
 
 
 .contentCards {
-    padding: 30px 0px 75px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -685,9 +691,9 @@ ul.personelInfo li.name {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    width: 300px;
-    height: 400px;
-    margin: 10px auto;
+    width: 333px;
+    height: 430px;
+    margin: 10px;
     padding: 20px;
     font-size: 1.2rem;
 }
@@ -861,6 +867,7 @@ ul.personelInfo li.name {
     align-self: center;
 
 }
+
 .statistic {
     width: 234px;
     height: 200px;
@@ -997,9 +1004,7 @@ ul.personelInfo li.name {
     width: 60%;
 }
 
-#yrittäjyydestäCheckbox {}
 
-#tapahtumistaCheckbox {}
 
 /* Big images 2  */
 
@@ -1021,21 +1026,24 @@ ul.personelInfo li.name {
 
 .mapcontainer {
     position: relative;
+    display: flex;
+    flex-direction: row;
     height: 500px;
     background-color: var(--UI-grey);
     margin-bottom: 0px;
+    height: var(--splash-height);
+    width: var(--width);
 }
 
 .textOverlayLeft>p {
     margin-bottom: 20px;
 }
 
-.textOverlayLeft {
+.mapTextOverlay {
     position: absolute;
     top: 50px;
     left: 5%;
     width: 30%;
-    height: 500px;
 }
 
 .map {
@@ -1061,6 +1069,7 @@ ul.personelInfo li.name {
 }
 
 .footerbox {
+    text-align: center;
     position: relative;
     bottom: 50%;
 }
@@ -1131,6 +1140,10 @@ ul.personelInfo li.name {
 }
 
 @media only screen and (max-width: 720px) {
+    .container {
+        margin-bottom: 0px;
+        height: 750px;
+    }
     .navigation {
         display: grid;
         grid-template-columns: 200px 1fr;
@@ -1165,16 +1178,6 @@ ul.personelInfo li.name {
         z-index: 1; */
     }
 
-    #Palvelut:hover~#Palvelut-content {
-        height: 270px;
-        opacity: 1;
-    }
-
-    #Palvelut-content:hover {
-        overflow: visible;
-        height: 270px;
-        opacity: 1;
-    }
 
     #searchIcon {
         display: none;
@@ -1188,6 +1191,84 @@ ul.personelInfo li.name {
         display: none;
     }
 
+    /* Header Image */
+
+    .diagonal-overlay-mobile {
+        display: inline;
+    }
+    .diagonal-overlay {
+        display: none;
+    }
+
+    .HeaderText {
+        top: 50%;
+        left: 0;
+        min-width: 200px;
+        width: 80%;
+    }
+
+    /* Content Cards */
+
+    .seeAllButton {
+        width: 80%;
+    }
+
+    /* Overlay images */
+    
+    .overlayImageRight {
+        top: 200px;
+        left: 5%;
+        width: 500px;
+    }
+
+    .overlayImageLeft {
+        top: 200px;
+        left: 0;
+        right: 0;
+        width: 90%;
+    }
+
+    .squareImageLeft{
+        left:0;
+    }
+    /* Quote Carousel */ 
+    .quoteCarousel {
+        height: 550px
+    }
+
+    /* email subscription */ 
+
+    .emailSubscription {
+        margin-bottom: 50px;
+    }
+
+    /* map */ 
+
+    .mapcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 850px;
+    }
+
+    .mapTextOverlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+    }
+    
+    .map {
+        text-align: center;
+        border: 20px solid white;
+        background-color: var(--UI-grey);
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 400px;
+        width: 90%;
+    }
     /* Footer */
 
     .footerText {
@@ -1195,6 +1276,9 @@ ul.personelInfo li.name {
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     /* guideDownloads */

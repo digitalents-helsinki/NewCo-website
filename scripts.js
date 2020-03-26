@@ -16,7 +16,7 @@ const handleMenuOpen = (header) => {
 
     if (header === "palvelut" && !palvelutActive) {
         console.log("clicked")
-        palvelutContent.style.height = "250px"
+        palvelutContent.style.height = "350px"
 
         palvelutContent.classList.add("active")
         oppaitaContent.classList.remove("active")
@@ -29,7 +29,7 @@ const handleMenuOpen = (header) => {
         tietoaContentActive = false
     } else if (header === "oppaita" && !oppaitaActive) {
 
-        oppaitaContent.style.height = "250px"
+        oppaitaContent.style.height = "100px"
 
         palvelutContent.classList.remove("active")
         oppaitaContent.classList.add("active")
@@ -42,7 +42,7 @@ const handleMenuOpen = (header) => {
         tietoaContentActive = false
     } else if (header === "tietoa" && !tietoaContentActive) {
 
-        tietoaContent.style.height = "250px"
+        tietoaContent.style.height = "100px"
 
         palvelutContent.classList.remove("active")
         oppaitaContent.classList.remove("active")
@@ -70,20 +70,6 @@ const handleMenuOpen = (header) => {
 
 }
 
-const handleMenuclose = () => {
-    palvelutContent.style.height = "0px"
-    oppaitaContent.style.height = "0px"
-    tietoaContent.style.height = "0px"
-
-
-    palvelutContent.classList.remove("active")
-
-
-    palvelutActive = false
-    oppaitaActive = false
-    tietoaContentActive = false
-}
-
 Palvelut.addEventListener("click", (e) => {
     e.preventDefault;
     handleMenuOpen("palvelut")
@@ -97,28 +83,5 @@ Tietoa.addEventListener("click", (e) => {
     handleMenuOpen("tietoa")
 })
 
-Palvelut.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("palvelut")
-})
-Oppaita.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("oppaita")
-})
-Tietoa.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("tietoa")
-})
-palvelutContent.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("palvelut")
-})
-oppaitaContent.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("oppaita")
-})
-tietoaContent.addEventListener("mouseover", (e) => {
-    e.preventDefault;
-    handleMenuOpen("tietoa")
-})
+
 

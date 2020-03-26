@@ -1,3 +1,6 @@
+body {
+    background-color: white;
+}
 
 .palvelut-headline {
     font-weight: bold;
@@ -203,15 +206,6 @@
     background-color: var(--bussi);
 }
 
-.waveVarina {
-    -webkit-mask-image: url("/waves/varina.svg");
-    mask-image: url("/waves/varina.svg");
-    -webkit-mask-size: cover;
-    mask-size: contain;
-    bottom: 0;
-    mask-repeat: repeat;
-}
-
 .timestableContainer {
     background-color: var(--UI-grey);
     padding: 60px;
@@ -242,4 +236,35 @@
 }
 .timesContainer {
     padding-bottom: 50px;
+}
+
+.infonJälkeen {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.infonJälkeen >h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.overlayImageLeft {
+    background-color: var(--suomenlinna);
+}
+
+.englishSection {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.englishSection >h3 {
+    font-size: 24px;
+    font-weight: bold;
 }
