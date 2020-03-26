@@ -138,8 +138,7 @@ svg {
 .waveVarina {
     -webkit-mask-image: url("waves/varina.svg");
     mask-image: url("waves/varina.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
+    height: 10px;
 }
 
 .waveSyke {
