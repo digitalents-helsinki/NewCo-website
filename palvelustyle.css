@@ -99,7 +99,7 @@ body {
 
 /* The other image box stuff*/
 .overlayImageRight {
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
 }
 .eventsButton {
     text-align: center;

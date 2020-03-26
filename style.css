@@ -108,7 +108,7 @@ svg {
 
 /* Colors for wave motifs */
 .waveKupari {
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
 }
 
 .waveUIGREY {
@@ -116,11 +116,11 @@ svg {
 }
 
 .waveSuomenlinna {
-    background-color: var(--Suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
 }
 
 .waveEngel {
-    background-color: var(--Engel);
+    background-color: var(--Engel-light-50);
 }
 
 /* Wave motifs */
@@ -216,7 +216,7 @@ blockquote p:before {
     padding: 0 15px;
     margin: 0px;
     font-size: 120px;
-    color: var(--Kupari);
+    color: var(--Kupari-light-50);
 }
 
 /* Title for quote */
@@ -701,7 +701,7 @@ ul.personelInfo li.name {
 .Card>hr {
     width: 50%;
     margin: 0 auto;
-    color: var(--Kupari);
+    color: var(--Kupari-light-50);
 }
 
 .cardIcon {
@@ -891,7 +891,7 @@ ul.personelInfo li.name {
     left: 5%;
     height: 400px;
     width: 500px;
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 30px;
     font-size: 1.2rem;
     top: 50px;
@@ -910,7 +910,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 500px;
-    background-color: var(--Suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
     font-size: 1.1rem;
 }
 
@@ -979,7 +979,7 @@ ul.personelInfo li.name {
     display: flex;
     left: 60%;
     flex-direction: column;
-    background-color: var(--Engel);
+    background-color: var(--Engel-light-50);
     padding: 30px;
     width: 500px;
     height: 500px;
@@ -1018,7 +1018,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 30%;
-    background-color: var(--Suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
     font-size: 1.1rem;
 }
 
@@ -1058,13 +1058,13 @@ ul.personelInfo li.name {
 
 /* footer */
 .footer {
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 0rem;
 }
 
 .FooterWithoutMap {
     margin-top: 200px;
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 0rem;
 }
 
