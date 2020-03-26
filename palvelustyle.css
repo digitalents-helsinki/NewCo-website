@@ -206,15 +206,6 @@ body {
     background-color: var(--bussi);
 }
 
-.waveVarina {
-    -webkit-mask-image: url("/waves/varina.svg");
-    mask-image: url("/waves/varina.svg");
-    -webkit-mask-size: cover;
-    mask-size: contain;
-    bottom: 0;
-    mask-repeat: repeat;
-}
-
 .timestableContainer {
     background-color: var(--UI-grey);
     padding: 60px;

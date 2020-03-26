@@ -147,7 +147,6 @@ svg {
     mask-image: url("waves/varina.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    bottom: 50px;
 }
 
 .waveSyke {
