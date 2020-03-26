@@ -1,13 +1,6 @@
 * {
     --splash-height: 500px;
     --width: 100%;
-
-    --Kupari: #80EBD3;
-    --UI-grey: #F6F6F8;
-    --bussi: #0000bf;
-    --suomenlinna: #fad1e3;
-    --engel: #fff4BB;
-
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -18,14 +11,14 @@
 
 
 a {
-    color: black;
+    color: var(--Musta);
     text-decoration: none;
     /* no underline */
 }
 
 /* TODO: needs to be changed later on and make normal <a></a> links blue and setup menus with different colors. */
 a.inline {
-    color: var(--bussi);
+    color: var(--Bussi);
     text-decoration: underline;
 }
 
@@ -44,7 +37,7 @@ h3 {
 .wrapper {
     width: var(--width);
     max-width: 1440px;
-    background-color: white;
+    background-color: var(--Valkoinen);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -115,7 +108,7 @@ svg {
 
 /* Colors for wave motifs */
 .waveKupari {
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
 }
 
 .waveUIGREY {
@@ -123,11 +116,11 @@ svg {
 }
 
 .waveSuomenlinna {
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
 }
 
 .waveEngel {
-    background-color: var(--engel);
+    background-color: var(--Engel-light-50);
 }
 
 /* Wave motifs */
@@ -145,9 +138,7 @@ svg {
 .waveVarina {
     -webkit-mask-image: url("waves/varina.svg");
     mask-image: url("waves/varina.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    bottom: 50px;
+    height: 10px;
 }
 
 .waveSyke {
@@ -211,7 +202,7 @@ blockquote p {
     display: flex;
     align-items: center;
     padding: 15px;
-    color: #000;
+    color: var(--Musta);
     font-size: 24px;
     font-weight: bold;
 }
@@ -224,7 +215,7 @@ blockquote p:before {
     padding: 0 15px;
     margin: 0px;
     font-size: 120px;
-    color: var(--Kupari);
+    color: var(--Kupari-light-50);
 }
 
 /* Title for quote */
@@ -416,7 +407,6 @@ span {
     display: block;
     height: 250px;
 }
-
 /* Header image with diagonal swirl */
 
 .headerWithDiagnalLine {
@@ -545,7 +535,7 @@ div.mNewsCenter {
 
 .mNewsText {
     padding: 40px;
-    background: white;
+    background: var(--Valkoinen);
 }
 
 .mNewsDate {
@@ -595,12 +585,12 @@ ul.personelInfo li.name {
 .Button {
     margin: 20px;
     padding: 15px;
-    color: var(--bussi);
-    border: 2px solid var(--bussi);
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
 }
 
 .Button>a {
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 /* Yhteystiedot profile cards */
@@ -710,7 +700,7 @@ ul.personelInfo li.name {
 .Card>hr {
     width: 50%;
     margin: 0 auto;
-    color: var(--Kupari);
+    color: var(--Kupari-light-50);
 }
 
 .cardIcon {
@@ -719,12 +709,12 @@ ul.personelInfo li.name {
 
 .readMore>a {
     position: relative;
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 .cardArrow {
     margin: 0 5px;
-    color: var(--bussi);
+    color: var(--Bussi);
     filter: invert(30%) sepia(55%) saturate(7412%) hue-rotate(230deg) brightness(96%) contrast(91%);
 }
 
@@ -732,7 +722,7 @@ ul.personelInfo li.name {
     margin: 50px auto;
     text-align: center;
     padding: 10px;
-    background-color: var(--bussi);
+    background-color: var(--Bussi);
     width: 20%;
     color: white;
 }
@@ -812,12 +802,12 @@ ul.personelInfo li.name {
 .downloadGuideButton {
     margin: 20px;
     padding: 15px;
-    color: var(--bussi);
-    border: 2px solid var(--bussi);
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
 }
 
 .downloadGuideButton>a {
-    color: var(--bussi);
+    color: var(--Bussi);
 }
 
 /* VideoSection */
@@ -900,7 +890,7 @@ ul.personelInfo li.name {
     left: 5%;
     height: 400px;
     width: 500px;
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 30px;
     font-size: 1.2rem;
     top: 50px;
@@ -919,7 +909,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 500px;
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
     font-size: 1.1rem;
 }
 
@@ -947,7 +937,7 @@ ul.personelInfo li.name {
 
 .eventsButton {
     padding: 10px;
-    border: 2px solid #1a1a1a;
+    border: 2px solid var(--Black-80);
     margin-top: auto;
     width: 60%;
 }
@@ -973,22 +963,22 @@ ul.personelInfo li.name {
 /* Email Subscription box */
 
 .emailSubscription {
-    display: flex;
+    display: block;
+    margin-bottom: 60px;
 }
 
 .squareImage60 {
-    position: relative;
-    right: 20%;
+    position: absolute;
     width: 1000px;
     height: 500px;
 }
 
 .subscriptionBox {
-    position: absolute;
-    right: 0;
+    position: relative;
     display: flex;
+    left: 60%;
     flex-direction: column;
-    background-color: var(--engel);
+    background-color: var(--Engel-light-50);
     padding: 30px;
     width: 500px;
     height: 500px;
@@ -1005,7 +995,7 @@ ul.personelInfo li.name {
 
 .subscriptionBox>form>input {
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--Musta);
 }
 
 #emailInput {
@@ -1013,9 +1003,7 @@ ul.personelInfo li.name {
     width: 60%;
 }
 
-#yrittäjyydestäCheckbox {}
 
-#tapahtumistaCheckbox {}
 
 /* Big images 2  */
 
@@ -1029,7 +1017,7 @@ ul.personelInfo li.name {
     padding: 36px;
     height: 400px;
     width: 30%;
-    background-color: var(--suomenlinna);
+    background-color: var(--Suomenlinna-light-50);
     font-size: 1.1rem;
 }
 
@@ -1069,13 +1057,13 @@ ul.personelInfo li.name {
 
 /* footer */
 .footer {
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 0rem;
 }
 
 .FooterWithoutMap {
     margin-top: 200px;
-    background-color: var(--Kupari);
+    background-color: var(--Kupari-light-50);
     padding: 0rem;
 }
 
@@ -1138,6 +1126,11 @@ ul.personelInfo li.name {
     }
 
 
+    .subscriptionBox {
+
+        left: 50%;
+
+    }
     .mapcontainer {
         height: 600px;
     }

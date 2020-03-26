@@ -1,15 +1,16 @@
 /*
 
-   ## 1. Typography
+   ## 1. Hel Brand Colors
    ## 2. Elements
-   ## 3. Hel Brand Colors
+   ## 3. Typography
    ## 4. Waves
 
 */
 
-/* HEL BRAND COLORS */
+
+
+/* 1.       HEL BRAND COLORS */
 :root {
-=======
 
         /* 
            Spåra //####// Main color // Light:20% // Light:50% // Dark:50%
@@ -94,10 +95,10 @@
         /* 
            Kulta //####// Main color // Light:20% // Light:50% // Dark:50%
         */
-        --Engel:#C2A251;
-        --Engel-light-20:#F2ECDC;
-        --Engel-light-50:#E0D0A8;
-        --Engel-dark-50:#977B34;
+        --Kulta:#C2A251;
+        --Kulta-light-20:#F2ECDC;
+        --Kulta-light-50:#E0D0A8;
+        --Kulta-dark-50:#977B34;
 
         /* 
            PERUSVÄRIT //####// Musta // Hopea // Valkoinen
@@ -121,7 +122,8 @@
 
         --Info:#007293;
         --Info-light-20:#DCF1F5;
-
+        
+        --UI-grey: #F6F6F8;
         /* 
            Gray Shades for UI Components //####// Lighter <--> Darker
         */
@@ -138,3 +140,12 @@
         --Black-80:#333333;
         --Black-90:#1A1A1A;
 }
+
+/* 3.       ELEMENTS */
+
+
+
+/* 3.       TYPOGRAPHY */
+
+
+
