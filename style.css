@@ -48,7 +48,7 @@ h3 {
     position: relative;
     height: var(--splash-height);
     width: var(--width);
-    margin-bottom: 100px;
+    margin: 50px 0px;
 }
 
 /* if header doesn't have underlying picture, this should be applied */
