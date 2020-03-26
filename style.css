@@ -971,20 +971,20 @@ ul.personelInfo li.name {
 /* Email Subscription box */
 
 .emailSubscription {
-    display: flex;
+    display: block;
+    margin-bottom: 60px;
 }
 
 .squareImage60 {
-    position: relative;
-    right: 20%;
+    position: absolute;
     width: 1000px;
     height: 500px;
 }
 
 .subscriptionBox {
-    position: absolute;
-    right: 0;
+    position: relative;
     display: flex;
+    left: 60%;
     flex-direction: column;
     background-color: var(--engel);
     padding: 30px;
@@ -1134,6 +1134,11 @@ ul.personelInfo li.name {
     }
 
 
+    .subscriptionBox {
+
+        left: 50%;
+
+    }
     .mapcontainer {
         height: 600px;
     }
