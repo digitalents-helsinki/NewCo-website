@@ -1,13 +1,15 @@
 /*
 
-   ## 1. Typography
+   ## 1. Hel Brand Colors
    ## 2. Elements
-   ## 3. Hel Brand Colors
+   ## 3. Typography
    ## 4. Waves
 
 */
 
-/* HEL BRAND COLORS */
+
+
+/* 1.       HEL BRAND COLORS */
 :root {
 
         /* 
@@ -120,7 +122,8 @@
 
         --Info:#007293;
         --Info-light-20:#DCF1F5;
-
+        
+        --UI-grey: #F6F6F8;
         /* 
            Gray Shades for UI Components //####// Lighter <--> Darker
         */
@@ -137,3 +140,12 @@
         --Black-80:#333333;
         --Black-90:#1A1A1A;
 }
+
+/* 3.       ELEMENTS */
+
+
+
+/* 3.       TYPOGRAPHY */
+
+
+
