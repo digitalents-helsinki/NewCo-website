@@ -10,12 +10,16 @@ body {
 /*Events Styles */
 
 .Eventtext {
-    margin: 20px;
-    width: 50%;
+    flex-direction: column;
+    height: 250px;
     text-align: center;
-    margin: 100px auto 100px auto;
 }
 
+.Eventtext p {
+    max-width: 500px;
+    align-self: center;
+    font-size: 1.25rem;
+}
 
 .EventContainer {
     display: flex;
@@ -24,16 +28,15 @@ body {
     text-align: center;
     position: relative;
     width: var(--width);
-    flex-wrap: wrap;
-    background: var(--UI-grey);
-    padding-top: 3.25rem;
+
 }
 
 header {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
 }
 
 .EventCategories {
@@ -54,13 +57,15 @@ header {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr / 2fr;
     min-width: 400px;
+    max-width: 800px;
     height: 200px;
     margin: 10px auto;
-    padding: 20px;
+    padding: 40px 40px 40px 20px;
 }
 
 .EventCard a {
     justify-self: end;
+    padding-right: 4rem;
 }
 
 .Cardcontent {
@@ -68,7 +73,7 @@ header {
     padding-right: 4rem;
 }
 
-.Cardcontent h4, p{
+.Cardcontent h4,p {
     text-align: start;
 }
 
@@ -80,6 +85,10 @@ header {
 
 .readMore {
     place-self: end start;
+}
+
+.readMore>.dropbtn {
+    font-size: 0.9rem;
 }
 
 .seeAllButton2 {
@@ -95,13 +104,8 @@ header {
     font-weight: bold;
 }
 
-.waveTyrskyUpsideDown {
-    transform: rotate(180deg);
-    -webkit-mask-image: url("/waves/tyrsky.svg");
-    mask-image: url("/waves/tyrsky.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    height: 95px;
-    margin-bottom:50px;
-
+#moreEvents {
+    align-self: center;
+    flex: auto;
 }
+
