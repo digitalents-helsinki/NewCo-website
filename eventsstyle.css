@@ -102,8 +102,8 @@
     text-align: center;
     padding: 10px 15px 10px 15px;
     background-color: transparent;
-    border: 2px solid var(--bussi);
-    color: var(--bussi);
+    border: 2px solid var(--Bussi);
+    color: var(--Bussi);
     min-height: 56px;
     flex-basis: 48px auto;
     flex-grow: 100px;
@@ -145,10 +145,9 @@
     mask-image: url("/waves/perus.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
-    height: 28px;
-    z-index: 1;
+    height: 280px;
 }
 
-.mapcontainer {
+/* .mapcontainer {
     margin-bottom: -28px;
-}
+} */

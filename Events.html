@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="eventsstyle.css">
 </head>
@@ -14,94 +15,63 @@
     <div class="wrapper">
         <!-- Navigation Bar -->
         <div class="navigation">
-            <img class="helsinkiLogo" src="/Images/HELSINKI_Tunnus_MUSTA.png" alt="Helsinki Logo">
-            <p id="NewCo" class="navItem bold">NewCo Helsinki</p>
-                <p id="Palvelut" class="dropbtn">Palvelut &darr;
-                </p>
-                <div id="Palvelut-content" class="dropdown-content">
-                    <div>
-                        <a href="#">Kaikki palvelut</a>
-                    </div>
-                    <div>
-                        <span>Yrityspalvelut</span><br>
-                        <a href="#">Yritysinfo</a><br>
-                        <a href="#">Yritysneuvonta</a><br>
-                        <a href="#">Liiketoimintasuunnitelma</a><br>
-                    </div>
-                    <div>
-                        <span>Startup-palvelut</span><br>
-                        <a href="#">Yritysinfo</a><br>
-                        <a href="#">Yritysneuvonta</a><br>
-                        <a href="#">Liiketoimintasuunnitelma</a><br>
-                    </div>
+            <img class="helsinkiLogo" src="Images/HELSINKI_Tunnus_MUSTA.png" alt="Helsinki Logo">
+            <a href="Homepage.html" id="NewCo" class="navItem bold">NewCo Helsinki</a>
+            <p id="Palvelut" class="dropbtn">Palvelut <img src="Icons/keyboard_arrow_down-24px.svg" alt="">
+            </p>
+            <div id="Palvelut-content" class="dropdown-content">
+                <div class="dropdownLink">
+                    <a href="#">Kaikki palvelut</a>
                 </div>
-                <a id="Tapahtumat" href="#" class="navItem">Tapahtumat</a>
-                <p id="Oppaita" class="dropbtn">Oppaita ja aineistoa &darr;
-                </p>
-                <div id="Oppaita-content" class="dropdown-content">
-                    <div>
-                        <a href="#">Kaikki palvelut</a>
-                    </div>
-                    <div>
-                        <span>Yrityspalvelut</span>
-                        <a href="#">Yritysinfo</a>
-                        <a href="#">Yritysneuvonta</a>
-                        <a href="#">Liiketoimintasuunnitelma</a>
-                    </div>
-                    <div>
-                        <span>Startup-palvelut</span>
-                        <a href="#">Yritysinfo</a>
-                        <a href="#">Yritysneuvonta</a>
-                        <a href="#">Liiketoimintasuunnitelma</a>
-                    </div>
+                <div class="dropdownLink">
+                    <span>Yrityspalvelut</span><br>
+                    <a href="#">Yritysinfo</a><br>
+                    <a href="#">Yritysneuvonta</a><br>
+                    <a href="#">Liiketoimintasuunnitelma</a><br>
                 </div>
-                <p id="Tietoa" class="dropbtn">Tietoa meistä &darr;
-                </p>
-                <div id="Tietoa-content" class="dropdown-content">
-                    <div>
-                        <a href="#">Kaikki palvelut</a>
-                    </div>
-                    <div>
-                        <span>Yrityspalvelut</span>
-                        <a href="#">Yritysinfo</a>
-                        <a href="#">Yritysneuvonta</a>
-                        <a href="#">Liiketoimintasuunnitelma</a>
-                    </div>
-                    <div>
-                        <span>Startup-palvelut</span>
-                        <a href="#">Yritysinfo</a>
-                        <a href="#">Yritysneuvonta</a>
-                        <a href="#">Liiketoimintasuunnitelma</a>
-                    </div>
+                <div class="dropdownLink">
+                    <span>Startup-palvelut</span><br>
+                    <a href="#">Yritysinfo</a><br>
+                    <a href="#">Yritysneuvonta</a><br>
+                    <a href="#">Liiketoimintasuunnitelma</a><br>
                 </div>
-            <img class="searchIcon" id="searchIcon" src="/Icons/search-24px.svg" alt="search">
-                <p id="langDropdown" class="dropbtn">FI
-                    <img src="/Icons/keyboard_arrow_down-24px.svg" alt="">
-                </p>
-                <div id="langDropdown-content" class="dropdown-content">
-                    <a href="#">FI</a>
-                    <a href="#">SWE</a>
-                    <a href="#">ENG</a>
-                </div>
+            </div>
+            <a id="Tapahtumat" class="dropbtn" href="#">Tapahtumat</a>
+            <p id="Oppaita" class="dropbtn">Oppaita ja aineistoa <img src="Icons/keyboard_arrow_down-24px.svg" alt="">
+            </p>
+            <div id="Oppaita-content" class="dropdown-content">
+                <a href="#">Oppaat</a><br>
+                <a href="#">Videomateriaali</a><br>
+                <a href="#">Materiaalit tapahtumista</a><br>
+            </div>
+            <p id="Tietoa" class="dropbtn">Tietoa meistä <img src="Icons/keyboard_arrow_down-24px.svg" alt="">
+            </p>
+            <div id="Tietoa-content" class="dropdown-content">
+                <a href="#">Oppaat</a><br>
+                <a href="#">Videomateriaali</a><br>
+                <a href="#">Materiaalit tapahtumista</a><br>
+            </div>
+            <img class="searchIcon" id="searchIcon" src="Icons/search-24px.svg" alt="search">
+            <p id="langDropdown" class="dropbtn">FI
+                <img src="Icons/keyboard_arrow_down-24px.svg" alt="">
+            </p>
+            <div id="langDropdown-content" class="dropdown-content">
+                <a href="#">FI</a>
+                <a href="#">SWE</a>
+                <a href="#">ENG</a>
+            </div>
         </div>
 
-
-        <div class="container2 bgGrey">
-            <div class="pageTitleText bgGrey">
+        <div class="container">
+            <img class="heroImage" src="/Images/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png" alt="Placeholder">
+            <div class="wavemotif-loader waveUIGREY wavePerusUpsidedown"></div>
+            <div class="pageTitleText">
                 <h1>Tapahtumat</h1>
                 <p>dolor, sit amet consectetur adipisicing elit. Cumque labore repellat delectus suscipit, provident,
                     quis
                 </p>
             </div>
         </div>
-
-        <div class="container3">
-                    <!--Swirly Divider--> 
-        <div class="wavemotif-loader waveUIGREY wavePerusUpsidedown"></div>
-            <img class="heroImage" src="/Images/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png" alt="Placeholder">
-
-        
-    
 
         </div>
             <div class="Eventtext">
@@ -115,12 +85,13 @@
 
                 <!--Swirly Divider--> 
                 <div class="wavemotif-loader waveUIGREY waveTyrsky"></div>
+
         <!--Events -->
 
         <div class="EventContainer ">   
             
             <!--Events Categories-->
-            <h5>Tapahtumia</h5>
+            <header>Tapahtumia</header>
             <h3>Rajaa Tapahtumia:</h3>
             <div class= "EventCategories">
                 <div class="seeAllButton2"> Verkostoituminen</div>
