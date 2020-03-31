@@ -65,9 +65,10 @@ header {
 
 .Cardcontent {
     place-self: start start;
+    padding-right: 4rem;
 }
 
-.Cardcontent h4 {
+.Cardcontent h4, p{
     text-align: start;
 }
 
