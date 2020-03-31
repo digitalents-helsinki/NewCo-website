@@ -1,0 +1,111 @@
+
+body {
+    background-color: white;
+}
+
+.bgGrey {
+    background-color: var(--UI-grey);
+}
+
+/*Events Styles */
+
+.Eventtext {
+    flex-direction: column;
+    height: 250px;
+    text-align: center;
+}
+
+.Eventtext p {
+    max-width: 500px;
+    align-self: center;
+    font-size: 1.25rem;
+}
+
+.EventContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    width: var(--width);
+
+}
+
+header {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.EventCategories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+}
+.EventCards {
+
+    display: flex;
+    flex-direction: column;
+
+}
+.EventCard {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr / 2fr;
+    min-width: 400px;
+    max-width: 800px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 40px 40px 40px 20px;
+}
+
+.EventCard a {
+    justify-self: end;
+    padding-right: 4rem;
+}
+
+.Cardcontent {
+    place-self: start start;
+    padding-right: 4rem;
+}
+
+.Cardcontent h4,p {
+    text-align: start;
+}
+
+.datetime {
+    grid-row: span 2;
+    place-self: start center;
+    text-align: start;
+}
+
+.readMore {
+    place-self: end start;
+}
+
+.readMore>.dropbtn {
+    font-size: 0.9rem;
+}
+
+.seeAllButton2 {
+    margin: 1rem;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    background-color: transparent;
+    border: 2px solid var(--Bussi);
+    color: var(--Bussi);
+    min-height: 56px;
+    flex-basis: 48px auto;
+    flex-grow: 100px;
+    font-weight: bold;
+}
+
+#moreEvents {
+    align-self: center;
+    flex: auto;
+}
+
