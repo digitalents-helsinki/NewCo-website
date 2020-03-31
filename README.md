@@ -16,7 +16,7 @@
 9. [Oppaat](https://digitalents-helsinki.github.io/NewCo-website/Oppaat.html)
 10. [Videomateriaali](https://digitalents-helsinki.github.io/NewCo-website/Videomateriaali.html)
 
-11. [Events](https://digitalents-helsinki.github.io/NewCo-website/events.html)
+11. [Events](https://digitalents-helsinki.github.io/NewCo-website/Events.html)
 12. [StartUps-Helsinki](https://digitalents-helsinki.github.io/NewCo-website/StartUps-Helsinki.html)
 
 
