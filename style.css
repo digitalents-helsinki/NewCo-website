@@ -781,6 +781,37 @@ ul.personelInfo li.name {
     width: 30%;
     color: white;
 }
+/* Palvelut Content card */
+
+.palvelut-headline {
+    font-weight: bold;
+}
+
+.palvelu-filter {
+    border: solid 2px var(--Bussi);
+    padding: 15px;
+    margin: 20px;
+    color: var(--Bussi);
+}
+
+.contentText {
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.palvelurajaus {
+    display: flex;
+    margin: 0 5px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.palvelu-filter {
+    padding: 8px;
+
+}
 
 /* NewsCards */
 .newsContainer {
@@ -1148,7 +1179,159 @@ ul.personelInfo li.name {
     width: 60%;
 }
 
+/* Wide newsletter box*/
 
+.emailSubscriptionWide {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+}
+
+.subscriptionBoxWide {
+    position: relative;
+    background-color: var(--Engel-light-50);
+    padding: 40px;
+    width: 80%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr;
+    grid-gap: 10px;
+}
+.gridImg {
+    grid-column: 1 / 2;
+}
+
+.gridFirst {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+.tilaaHeader {
+    font-size: 2rem;
+}
+
+.gridSecond {
+    grid-column: 3 / 4;
+
+}
+
+#emailInput {
+    height: 3.5rem;
+    width: 50%;
+    margin: 0;
+}
+
+#yrittäjyydestäCheckbox {
+    border: 2px solid #1a1a1a;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+#tapahtumistaCheckbox {
+    border: 2px solid #1a1a1a;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin-left: 0;
+}
+
+.demon {
+    display: flex;
+    position: absolute;
+    right: 60px;
+    top: 68px;
+}
+
+.submitButton {
+    font-size: 1rem;
+    text-align: center;
+    text-justify: center;
+    padding: 15px;
+    border: 2px solid #1a1a1a;
+    background-color: var(--engel);
+    width: 100%;
+    height: 3.5rem;
+    float: right;
+}
+
+/* Palvelut2 pages stylings below */
+
+.ajanvaraus {
+    margin: 20px;
+    padding-bottom: 100px;
+}
+
+.varaus-link {
+    border: solid 2px var(--bussi);
+    padding: 20px;
+    color: white;
+    background-color: var(--bussi);
+}
+
+.timestableContainer {
+    background-color: var(--UI-grey);
+    padding: 60px;
+}
+
+.timestableContainer >h4 {
+   font-weight: normal;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 20px;
+}
+
+.timestable {
+    margin: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.imgContainer{
+    justify-items: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+.imgContainer >img {
+    float: right;
+}
+.timesContainer {
+    padding-bottom: 50px;
+}
+
+.infonJälkeen {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.infonJälkeen >h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.englishSection {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.englishSection >h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
 
 /* Big images 2  */
 

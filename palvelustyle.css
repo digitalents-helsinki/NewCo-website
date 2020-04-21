@@ -1,6 +1,4 @@
-body {
-    background-color: white;
-}
+
 
 .palvelut-headline {
     font-weight: bold;
@@ -194,8 +192,6 @@ body {
 }
 
 /* Palvelut2 pages stylings below */
-
-
 
 .ajanvaraus {
     margin: 20px;
